@@ -1,0 +1,3017 @@
+('C:\\Users\\su656\\OneDrive\\바탕 '
+ '화면\\animal-game1\\build\\AnimalBridge\\AnimalBridge.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('game_core',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\game_core.py',
+   'PYSOURCE'),
+  ('python313.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\python313.dll',
+   'BINARY'),
+  ('libtiff-5.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libtiff-5.dll',
+   'BINARY'),
+  ('SDL2_ttf.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_ttf.dll',
+   'BINARY'),
+  ('libpng16-16.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libpng16-16.dll',
+   'BINARY'),
+  ('SDL2_mixer.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_mixer.dll',
+   'BINARY'),
+  ('zlib1.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\zlib1.dll',
+   'BINARY'),
+  ('libopus-0.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libopus-0.dll',
+   'BINARY'),
+  ('libwebp-7.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libwebp-7.dll',
+   'BINARY'),
+  ('libopusfile-0.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libopusfile-0.dll',
+   'BINARY'),
+  ('SDL2.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2.dll',
+   'BINARY'),
+  ('portmidi.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\portmidi.dll',
+   'BINARY'),
+  ('freetype.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\freetype.dll',
+   'BINARY'),
+  ('libmodplug-1.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libmodplug-1.dll',
+   'BINARY'),
+  ('SDL2_image.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_image.dll',
+   'BINARY'),
+  ('libogg-0.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libogg-0.dll',
+   'BINARY'),
+  ('libjpeg-9.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libjpeg-9.dll',
+   'BINARY'),
+  ('_decimal.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_asyncio.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_wmi.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_wmi.pyd',
+   'EXTENSION'),
+  ('pymunk\\_chipmunk.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymunk\\_chipmunk.pyd',
+   'EXTENSION'),
+  ('_cffi_backend.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\imageext.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\imageext.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\scrap.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\scrap.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mixer.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\mixer.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mixer_music.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\mixer_music.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\font.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\font.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\_freetype.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\_freetype.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\transform.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\transform.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\time.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\time.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\pixelarray.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\pixelarray.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mask.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\mask.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\surface.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\surface.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\pixelcopy.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\pixelcopy.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mouse.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\mouse.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\key.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\key.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\joystick.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\joystick.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\image.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\image.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\event.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\event.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\draw.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\draw.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\display.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\display.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\math.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\math.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\bufferproxy.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\bufferproxy.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\color.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\color.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\surflock.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\surflock.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\rwobject.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\rwobject.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\rect.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\rect.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\constants.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\constants.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\base.cp313-win_amd64.pyd',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\base.cp313-win_amd64.pyd',
+   'EXTENSION'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('pygame\\zlib1.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\zlib1.dll',
+   'BINARY'),
+  ('pygame\\libjpeg-9.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libjpeg-9.dll',
+   'BINARY'),
+  ('pygame\\SDL2.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2.dll',
+   'BINARY'),
+  ('pygame\\libopus-0.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libopus-0.dll',
+   'BINARY'),
+  ('pygame\\libogg-0.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libogg-0.dll',
+   'BINARY'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('python3.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\python3.dll',
+   'BINARY'),
+  ('pygame\\libpng16-16.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\libpng16-16.dll',
+   'BINARY'),
+  ('pygame\\SDL2_image.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_image.dll',
+   'BINARY'),
+  ('pygame\\SDL2_mixer.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_mixer.dll',
+   'BINARY'),
+  ('pygame\\SDL2_ttf.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\SDL2_ttf.dll',
+   'BINARY'),
+  ('pygame\\freetype.dll',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\freetype.dll',
+   'BINARY'),
+  ('assets\\Font\\PressStart2P-Regular.ttf',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Font\\PressStart2P-Regular.ttf',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\arrowDown.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\arrowDown.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\arrowLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\arrowLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\arrowRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\arrowRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\arrowUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\arrowUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\audioOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\audioOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\audioOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\audioOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\backward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\backward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\barsHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\barsHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\barsVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\barsVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\basket.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\basket.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\button1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\button1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\button2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\button2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\button3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\button3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonA.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonA.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonB.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonB.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonL.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonL.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonL1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonL1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonL2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonL2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonR.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonR.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonR1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonR1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonR2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonR2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonSelect.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonSelect.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonStart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonStart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonX.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonX.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\buttonY.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\buttonY.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\cart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\cart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\checkmark.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\contrast.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\contrast.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\cross.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\door.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\door.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\down.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\down.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\downLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\downLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\downRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\downRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\exclamation.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\exclamation.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\exitLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\exitLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\exitRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\exitRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\export.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\export.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\fastForward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\fastForward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\film.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\film.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\forward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\forward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gamepad.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gamepad.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gamepad1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gamepad1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gamepad2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gamepad2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gamepad3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gamepad3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gamepad4.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gamepad4.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\gear.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\gear.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\home.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\home.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\import.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\import.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\information.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\information.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\joystick.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\joystick.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\joystickLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\joystickLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\joystickRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\joystickRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\joystickUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\joystickUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\larger.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\larger.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\leaderboardsComplex.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\leaderboardsComplex.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\leaderboardsSimple.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\leaderboardsSimple.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\locked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\locked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\massiveMultiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\massiveMultiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\medal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\medal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\medal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\medal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\menuGrid.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\menuGrid.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\menuList.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\menuList.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\minus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\minus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\mouse.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\mouse.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\multiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\multiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\musicOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\musicOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\musicOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\musicOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\next.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\next.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\open.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\open.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\pause.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\pause.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\phone.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\phone.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\plus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\plus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\power.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\power.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\previous.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\previous.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\question.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\question.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\return.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\return.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\rewind.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\rewind.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\save.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\save.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\scrollHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\scrollHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\scrollVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\scrollVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\share1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\share1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\share2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\share2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\signal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\signal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\signal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\signal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\signal3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\signal3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\singleplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\singleplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\smaller.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\smaller.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\star.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\stop.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\stop.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\tablet.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\tablet.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\target.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\target.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\trashcan.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\trashcan.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\trashcanOpen.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\trashcanOpen.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\trophy.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\trophy.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\unlocked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\unlocked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\up.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\up.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\upLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\upLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\upRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\upRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\video.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\video.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\warning.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\warning.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\wrench.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\wrench.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\zoom.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\zoom.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\zoomDefault.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\zoomDefault.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\zoomIn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\zoomIn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\1x\\zoomOut.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\1x\\zoomOut.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\arrowDown.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\arrowDown.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\arrowLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\arrowLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\arrowRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\arrowRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\arrowUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\arrowUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\audioOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\audioOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\audioOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\audioOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\barsHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\barsHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\barsVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\barsVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\button1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\button1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\button2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\button2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\button3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\button3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonA.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonA.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonB.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonB.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonL.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonL.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonL1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonL1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonL2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonL2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonR.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonR.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonR1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonR1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonR2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonR2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonSelect.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonSelect.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonStart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonStart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonX.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonX.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\buttonY.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\buttonY.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\checkmark.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\contrast.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\contrast.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\cross.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\down.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\down.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\downLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\downLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\downRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\downRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\exclamation.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\exclamation.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\exit.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\exit.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\exitLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\exitLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\exitRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\exitRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\export.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\export.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\fastForward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\fastForward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gamepad.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gamepad.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gamepad1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gamepad1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gamepad2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gamepad2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gamepad3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gamepad3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gamepad4.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gamepad4.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\gear.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\gear.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\home.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\home.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\import.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\import.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\information.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\information.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\joystick.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\joystick.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\joystickLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\joystickLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\joystickRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\joystickRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\joystickUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\joystickUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\larger.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\larger.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\leaderboardsComplex.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\leaderboardsComplex.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\leaderboardsSimple.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\leaderboardsSimple.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\left.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\left.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\locked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\locked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\massiveMultiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\massiveMultiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\medal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\medal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\medal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\medal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\menuGrid.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\menuGrid.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\menuList.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\menuList.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\minus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\minus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\mouse.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\mouse.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\movie.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\movie.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\multiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\multiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\musicOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\musicOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\musicOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\musicOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\next.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\next.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\open.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\open.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\pause.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\pause.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\phone.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\phone.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\plus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\plus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\power.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\power.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\previous.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\previous.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\question.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\question.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\return.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\return.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\rewind.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\rewind.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\right.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\right.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\save.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\save.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\scrollHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\scrollHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\scrollVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\scrollVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\share1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\share1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\share2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\share2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\shoppingBasket.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\shoppingBasket.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\shoppingCart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\shoppingCart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\siganl1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\siganl1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\signal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\signal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\signal3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\signal3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\singleplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\singleplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\smaller.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\smaller.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\star.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\stop.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\stop.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\tablet.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\tablet.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\target.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\target.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\trashcan.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\trashcan.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\trashcanOpen.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\trashcanOpen.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\trophy.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\trophy.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\unlocked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\unlocked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\up.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\up.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\upLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\upLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\upRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\upRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\video.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\video.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\warning.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\warning.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\wrench.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\wrench.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\zoom.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\zoom.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\zoomDefault.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\zoomDefault.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\zoomIn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\zoomIn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\Black\\2x\\zoomOut.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\Black\\2x\\zoomOut.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\arrowDown.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\arrowDown.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\arrowLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\arrowLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\arrowRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\arrowRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\arrowUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\arrowUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\audioOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\audioOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\audioOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\audioOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\backward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\backward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\barsHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\barsHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\barsVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\barsVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\basket.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\basket.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\button1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\button1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\button2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\button2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\button3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\button3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonA.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonA.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonB.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonB.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonL.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonL.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonL1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonL1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonL2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonL2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonR.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonR.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonR1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonR1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonR2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonR2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonSelect.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonSelect.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonStart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonStart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonX.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonX.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\buttonY.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\buttonY.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\cart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\cart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\checkmark.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\contrast.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\contrast.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\cross.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\door.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\door.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\down.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\down.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\downLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\downLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\downRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\downRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\exclamation.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\exclamation.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\exitLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\exitLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\exitRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\exitRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\export.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\export.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\fastForward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\fastForward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\film.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\film.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\forward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\forward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gamepad.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gamepad.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gamepad1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gamepad1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gamepad2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gamepad2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gamepad3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gamepad3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gamepad4.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gamepad4.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\gear.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\gear.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\home.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\home.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\import.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\import.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\information.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\information.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\joystick.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\joystick.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\joystickLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\joystickLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\joystickRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\joystickRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\joystickUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\joystickUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\larger.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\larger.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\leaderboardsComplex.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\leaderboardsComplex.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\leaderboardsSimple.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\leaderboardsSimple.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\locked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\locked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\massiveMultiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\massiveMultiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\medal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\medal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\medal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\medal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\menuGrid.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\menuGrid.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\menuList.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\menuList.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\minus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\minus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\mouse.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\mouse.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\multiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\multiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\musicOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\musicOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\musicOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\musicOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\next.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\next.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\open.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\open.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\pause.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\pause.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\phone.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\phone.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\plus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\plus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\power.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\power.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\previous.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\previous.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\question.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\question.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\return.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\return.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\rewind.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\rewind.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\save.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\save.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\scrollHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\scrollHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\scrollVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\scrollVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\share1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\share1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\share2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\share2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\signal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\signal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\signal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\signal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\signal3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\signal3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\singleplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\singleplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\smaller.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\smaller.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\star.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\stop.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\stop.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\tablet.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\tablet.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\target.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\target.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\trashcan.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\trashcan.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\trashcanOpen.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\trashcanOpen.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\trophy.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\trophy.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\unlocked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\unlocked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\up.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\up.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\upLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\upLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\upRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\upRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\video.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\video.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\warning.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\warning.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\wrench.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\wrench.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\zoom.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\zoom.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\zoomDefault.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\zoomDefault.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\zoomIn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\zoomIn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\1x\\zoomOut.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\1x\\zoomOut.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\arrowDown.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\arrowDown.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\arrowLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\arrowLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\arrowRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\arrowRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\arrowUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\arrowUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\audioOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\audioOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\audioOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\audioOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\barsHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\barsHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\barsVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\barsVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\button1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\button1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\button2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\button2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\button3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\button3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonA.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonA.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonB.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonB.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonL.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonL.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonL1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonL1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonL2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonL2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonR.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonR.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonR1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonR1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonR2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonR2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonSelect.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonSelect.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonStart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonStart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonX.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonX.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\buttonY.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\buttonY.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\checkmark.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\contrast.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\contrast.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\cross.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\down.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\down.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\downLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\downLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\downRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\downRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\exclamation.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\exclamation.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\exit.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\exit.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\exitLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\exitLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\exitRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\exitRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\export.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\export.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\fastForward.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\fastForward.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gamepad.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gamepad.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gamepad1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gamepad1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gamepad2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gamepad2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gamepad3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gamepad3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gamepad4.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gamepad4.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\gear.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\gear.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\home.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\home.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\import.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\import.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\information.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\information.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\joystick.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\joystick.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\joystickLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\joystickLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\joystickRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\joystickRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\joystickUp.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\joystickUp.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\larger.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\larger.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\leaderboardsComplex.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\leaderboardsComplex.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\leaderboardsSimple.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\leaderboardsSimple.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\left.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\left.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\locked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\locked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\massiveMultiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\massiveMultiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\medal1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\medal1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\medal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\medal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\menuGrid.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\menuGrid.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\menuList.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\menuList.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\minus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\minus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\mouse.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\mouse.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\movie.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\movie.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\multiplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\multiplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\musicOff.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\musicOff.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\musicOn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\musicOn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\next.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\next.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\open.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\open.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\pause.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\pause.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\phone.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\phone.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\plus.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\plus.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\power.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\power.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\previous.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\previous.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\question.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\question.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\return.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\return.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\rewind.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\rewind.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\right.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\right.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\save.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\save.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\scrollHorizontal.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\scrollHorizontal.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\scrollVertical.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\scrollVertical.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\share1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\share1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\share2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\share2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\shoppingBasket.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\shoppingBasket.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\shoppingCart.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\shoppingCart.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\siganl1.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\siganl1.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\signal2.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\signal2.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\signal3.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\signal3.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\singleplayer.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\singleplayer.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\smaller.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\smaller.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\star.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\stop.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\stop.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\tablet.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\tablet.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\target.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\target.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\trashcan.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\trashcan.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\trashcanOpen.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\trashcanOpen.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\trophy.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\trophy.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\unlocked.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\unlocked.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\up.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\up.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\upLeft.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\upLeft.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\upRight.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\upRight.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\video.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\video.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\warning.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\warning.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\wrench.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\wrench.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\zoom.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\zoom.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\zoomDefault.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\zoomDefault.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\zoomIn.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\zoomIn.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\White\\2x\\zoomOut.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\White\\2x\\zoomOut.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\preview.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\preview.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\sheet_white1x.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\sheet_white1x.png',
+   'DATA'),
+  ('assets\\Icons_spritesheet\\sheet_white1x.xml',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Icons_spritesheet\\sheet_white1x.xml',
+   'DATA'),
+  ('assets\\Sound\\card-slide-2.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\card-slide-2.ogg',
+   'DATA'),
+  ('assets\\Sound\\card-slide-3.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\card-slide-3.ogg',
+   'DATA'),
+  ('assets\\Sound\\cards-pack-take-out-1.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\cards-pack-take-out-1.ogg',
+   'DATA'),
+  ('assets\\Sound\\cards-pack-take-out-2.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\cards-pack-take-out-2.ogg',
+   'DATA'),
+  ('assets\\Sound\\confirmation_001.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\confirmation_001.ogg',
+   'DATA'),
+  ('assets\\Sound\\error_005.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\error_005.ogg',
+   'DATA'),
+  ('assets\\Sound\\error_008.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\error_008.ogg',
+   'DATA'),
+  ('assets\\Sound\\select_002.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\select_002.ogg',
+   'DATA'),
+  ('assets\\Sound\\switch_002.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Sound\\switch_002.ogg',
+   'DATA'),
+  ('assets\\Sound\\tap-a.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\Sound\\tap-a.ogg',
+   'DATA'),
+  ('assets\\Sound\\tap-b.ogg',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\Sound\\tap-b.ogg',
+   'DATA'),
+  ('assets\\Tilemap\\Tilesheet (Backgrounds).txt',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\Tilesheet (Backgrounds).txt',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0021.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0021.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0022.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0022.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0023.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0023.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0029.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0029.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0111.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0111.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0112.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0112.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0121.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0121.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0122.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0122.png',
+   'DATA'),
+  ('assets\\Tilemap\\tile_0123.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tile_0123.png',
+   'DATA'),
+  ('assets\\Tilemap\\tilemap-backgrounds.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tilemap-backgrounds.png',
+   'DATA'),
+  ('assets\\Tilemap\\tilemap-backgrounds24.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tilemap-backgrounds24.png',
+   'DATA'),
+  ('assets\\Tilemap\\tilemap16.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tilemap16.png',
+   'DATA'),
+  ('assets\\Tilemap\\tilemap18.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tilemap18.png',
+   'DATA'),
+  ('assets\\Tilemap\\tilemap24.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\Tilemap\\tilemap24.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_rectangle_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_rectangle_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_rectangle_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_rectangle_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_round_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_round_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_round_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_round_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_square_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_square_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\button_square_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\button_square_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\divider.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\divider.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\divider_edges.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\divider_edges.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_down_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_down_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_down_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_down_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_down_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_down_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_up_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_up_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_up_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_up_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_arrow_up_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_arrow_up_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_play_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_play_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_play_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_play_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_play_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_play_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_repeat_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_repeat_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_repeat_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_repeat_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\icon_repeat_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\icon_repeat_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\input_outline_rectangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\input_outline_rectangle.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\input_outline_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\input_outline_square.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\input_rectangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\input_rectangle.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Default\\input_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Default\\input_square.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_rectangle_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_rectangle_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_rectangle_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_rectangle_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_round_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_round_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_round_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_round_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_square_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_square_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\button_square_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\button_square_line.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\divider.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\divider.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\divider_edges.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\divider_edges.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_down_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_down_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_down_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_down_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_down_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_down_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_up_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_up_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_up_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_up_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_arrow_up_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_arrow_up_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_play_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_play_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_play_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_play_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_play_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_play_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_repeat_dark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_repeat_dark.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_repeat_light.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_repeat_light.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\icon_repeat_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\icon_repeat_outline.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\input_outline_rectangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\input_outline_rectangle.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\input_outline_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\input_outline_square.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\input_rectangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\input_rectangle.png',
+   'DATA'),
+  ('assets\\UI\\Extra\\Double\\input_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Extra\\Double\\input_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_e.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_e.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_e_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_e_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_n.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_n.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_n_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_n_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_s.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_s.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_s_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_s_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_w.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_w.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_basic_w_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_basic_w_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_e.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_e.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_e_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_e_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_n.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_n.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_n_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_n_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_s.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_s.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_s_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_s_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_w.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_w.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\arrow_decorative_w_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\arrow_decorative_w_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_rectangle_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_rectangle_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_round_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_round_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\button_square_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\button_square_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_round_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_round_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_round_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_round_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_round_grey_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_round_grey_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_round_round_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_round_round_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_color_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_color_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_color_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_color_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_color_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_color_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_grey_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_grey_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_grey_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_grey_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\check_square_grey_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\check_square_grey_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_outline_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_outline_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_outline_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_outline_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_outline_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_outline_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_outline_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_outline_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\icon_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\icon_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_hangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_hangle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_color_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_color_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_color_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_color_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_grey_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_grey_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_horizontal_grey_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_horizontal_grey_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_color_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_color_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_color_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_color_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_grey_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_grey_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\slide_vertical_grey_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\slide_vertical_grey_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\star.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\star_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\star_outline.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Default\\star_outline_depth.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Default\\star_outline_depth.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_e.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_e.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_e_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_e_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_n.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_n.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_n_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_n_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_s.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_s.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_s_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_s_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_w.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_w.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_basic_w_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_basic_w_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_e.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_e.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_e_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_e_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_n.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_n.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_n_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_n_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_s.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_s.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_s_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_s_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_w.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_w.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\arrow_decorative_w_small.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\arrow_decorative_w_small.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_rectangle_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_rectangle_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_round_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_round_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_depth_border.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_depth_border.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_depth_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_depth_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_depth_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_depth_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_depth_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_depth_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_depth_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_depth_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_flat.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_flat.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_gloss.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_gloss.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_gradient.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_gradient.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\button_square_line.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\button_square_line.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_round_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_round_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_round_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_round_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_round_grey_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_round_grey_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_round_round_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_round_round_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_color_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_color_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_color_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_color_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_color_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_color_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_grey_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_grey_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_grey_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_grey_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\check_square_grey_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\check_square_grey_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_outline_checkmark.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_outline_checkmark.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_outline_circle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_outline_circle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_outline_cross.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_outline_cross.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_outline_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_outline_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\icon_square.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\icon_square.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_hangle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_hangle.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_color_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_color_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_color_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_color_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_grey_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_grey_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_horizontal_grey_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_horizontal_grey_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_color.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_color.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_color_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_color_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_color_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_color_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_grey.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_grey.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_grey_section.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_grey_section.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\slide_vertical_grey_section_wide.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\slide_vertical_grey_section_wide.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\star.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\star.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\star_outline.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\star_outline.png',
+   'DATA'),
+  ('assets\\UI\\Grey\\Double\\star_outline_depth.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\UI\\Grey\\Double\\star_outline_depth.png',
+   'DATA'),
+  ('assets\\img\\bear.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\bear.png',
+   'DATA'),
+  ('assets\\img\\crocodile.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\assets\\img\\crocodile.png',
+   'DATA'),
+  ('assets\\img\\elephant.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\elephant.png',
+   'DATA'),
+  ('assets\\img\\flamingo.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\flamingo.png',
+   'DATA'),
+  ('assets\\img\\giraffe.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\giraffe.png',
+   'DATA'),
+  ('assets\\img\\hippo.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\hippo.png',
+   'DATA'),
+  ('assets\\img\\lion.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\lion.png',
+   'DATA'),
+  ('assets\\img\\python.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\python.png',
+   'DATA'),
+  ('assets\\img\\sloth.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\sloth.png',
+   'DATA'),
+  ('assets\\img\\tiger.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\tiger.png',
+   'DATA'),
+  ('assets\\img\\turtle.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\turtle.png',
+   'DATA'),
+  ('assets\\img\\zebra.png',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\assets\\img\\zebra.png',
+   'DATA'),
+  ('final_animal_blocks.json',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\final_animal_blocks.json',
+   'DATA'),
+  ('ranking.json',
+   'C:\\Users\\su656\\OneDrive\\바탕 화면\\animal-game1\\ranking.json',
+   'DATA'),
+  ('pygame\\freesansbold.ttf',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\freesansbold.ttf',
+   'DATA'),
+  ('pygame\\pygame_icon.bmp',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pygame\\pygame_icon.bmp',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+   'C:\\Users\\su656\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\su656\\OneDrive\\바탕 '
+   '화면\\animal-game1\\build\\AnimalBridge\\base_library.zip',
+   'DATA')],
+ 'python313.dll',
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
