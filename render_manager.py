@@ -16,7 +16,7 @@ class RenderManager:
         self.width = screen.get_width()
         self.height = screen.get_height()
         try:
-            self.background_image = pygame.image.load("background.png").convert()
+            self.background_image = pygame.image.load(resource_path("background.png")).convert()
         except FileNotFoundError:
             self.background_image = None
         self.text_surface_cache = None
@@ -247,7 +247,9 @@ class RenderManager:
 
         self.ui_manager.draw_interactive_button(back_button_rect, "뒤로 가기", fonts['feature'], (220, 220, 220), WHITE, (100, 100, 100))
     
-    def render_game_ui(self, ui_animals: list, dragging_animal: Optional[dict], animal_usage_counts: dict, stats: dict, fonts: dict, restart_button_rect: pygame.Rect):
+# render_manager.py의 RenderManager 클래스 내부에 있는 함수입니다.
+
+    def render_game_ui(self, ui_animals: list, dragging_animal: Optional[dict], animal_usage_counts: dict, stats: dict, fonts: dict, restart_button_rect: pygame.Rect, start_time: int):
         self.ui_manager.draw_game_ui_panel(pygame.Rect(0, self.height - scale_y(120), self.width, scale_y(120)))
         
         count_font = pygame.font.SysFont("impact", scale_font(25))
@@ -276,6 +278,23 @@ class RenderManager:
 
         button_font = pygame.font.SysFont("malgungothic", scale_font(25), bold=True)
         self.ui_manager.draw_interactive_button(restart_button_rect, "다시 시작", button_font, (220, 220, 220), WHITE, (100, 100, 100))
+
+        # --- [수정] 스테이지 경과 시간 표시 로직 (밀리초 제외) ---
+        elapsed_seconds = (pygame.time.get_ticks() - start_time) / 1000
+        minutes = int(elapsed_seconds // 60)
+        seconds = int(elapsed_seconds % 60)
+        time_str = f"{minutes:02}:{seconds:02}"
+
+        timer_font = pygame.font.SysFont("impact", scale_font(40))
+        time_surf = timer_font.render(time_str, True, WHITE)
+        time_shadow_surf = timer_font.render(time_str, True, (0, 0, 0, 150))
+
+        time_rect = time_surf.get_rect(topright=(self.width - scale_x(20), scale_y(15)))
+        shadow_rect = time_shadow_surf.get_rect(topright=(time_rect.right + scale_x(2), time_rect.top + scale_y(2)))
+        
+        self.screen.blit(time_shadow_surf, shadow_rect)
+        self.screen.blit(time_surf, time_rect)
+        # --- 로직 끝 ---
 
     def render_dragging_animal(self, dragging_animal: dict):
         mouse_x, mouse_y = pygame.mouse.get_pos()

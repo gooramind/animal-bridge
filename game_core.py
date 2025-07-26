@@ -418,7 +418,7 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
             "time_str": f"{(pygame.time.get_ticks() - start_time) / 1000:.2f}s"
         }
         
-        render_manager.render_game_ui(ui_animals, dragging_animal, animal_usage_counts, stats, fonts, restart_button_rect)
+        render_manager.render_game_ui(ui_animals, dragging_animal, animal_usage_counts, stats, fonts, restart_button_rect, start_time)
 
         if goal_area.collidepoint(player.body.position):
             clear_time_seconds = (pygame.time.get_ticks() - start_time) / 1000
@@ -803,7 +803,7 @@ class Game:
                         if start_button_rect.collidepoint(event.pos):
                             audio_manager.play_sound('click')
                             return "game_play", selected_stage_num
-                        if not popup_rect.collidepoint(event.pos):
+                        if not popup_rect.collidepoint(event.pos):  
                             selected_stage_num = None
 
             self.render_manager.render_stage_select(stage_rects, selected_stage_num, back_button_rect, scroll_y, scroll_bar_rect, content_height, view_height)
