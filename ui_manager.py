@@ -3,11 +3,18 @@
 import pygame
 import math
 from settings import *
+from settings import resource_path
 
 class UIManager:
     def __init__(self, screen):
         self.screen = screen
         self.font_cache = {}
+        # [수정] 이미지 로딩을 시도하지 않고, gear_icon을 None으로 설정하여 도형으로 그리도록 강제합니다.
+        # try:
+        #     self.gear_icon = pygame.image.load(resource_path("assets/img/gear_icon.png")).convert_alpha()
+        # except pygame.error:
+        #     print("경고: 'assets/img/gear_icon.png' 파일을 찾을 수 없습니다. 기본 도형으로 대체합니다.")
+        self.gear_icon = None
 
     def draw_disabled_overlay(self, rect, alpha=180):
         """rect 위에 반투명 회색 오버레이를 그려 비활성화 효과를 줌"""
@@ -20,6 +27,35 @@ class UIManager:
         if key not in self.font_cache: self.font_cache[key] = pygame.font.SysFont(font_name, size, bold=bold, italic=italic)
         return self.font_cache[key]
 
+    def draw_gear(self, rect, color):
+        """톱니바퀴 아이콘을 그립니다. 이미지가 있으면 이미지를, 없으면 도형을 그립니다."""
+        if self.gear_icon:
+            # 이미지가 성공적으로 로드된 경우
+            is_hovered = rect.collidepoint(pygame.mouse.get_pos())
+            
+            # 마우스를 올리면 살짝 커지는 효과
+            if is_hovered:
+                hover_rect = rect.inflate(rect.width * 0.1, rect.height * 0.1)
+                scaled_image = pygame.transform.smoothscale(self.gear_icon, hover_rect.size)
+                self.screen.blit(scaled_image, scaled_image.get_rect(center=rect.center))
+            else:
+                scaled_image = pygame.transform.smoothscale(self.gear_icon, rect.size)
+                self.screen.blit(scaled_image, rect)
+        else:
+            # 이미지를 찾지 못한 경우, 예전 방식으로 도형을 그립니다.
+            center = rect.center
+            outer_radius, inner_radius, hole_radius = rect.width / 2 * 0.9, rect.width / 2 * 0.9 * 0.7, rect.width / 2 * 0.9 * 0.4
+            points = []
+            for i in range(8):
+                angle1, angle2 = math.radians(i * 45 - 11.25), math.radians(i * 45 + 11.25)
+                points.append((center[0] + inner_radius * math.cos(angle1), center[1] + inner_radius * math.sin(angle1)))
+                points.append((center[0] + outer_radius * math.cos(angle1), center[1] + outer_radius * math.sin(angle1)))
+                points.append((center[0] + outer_radius * math.cos(angle2), center[1] + outer_radius * math.sin(angle2)))
+                points.append((center[0] + inner_radius * math.cos(angle2), center[1] + inner_radius * math.sin(angle2)))
+            for i in range(0, len(points), 4): pygame.draw.polygon(self.screen, color, points[i:i+4])
+            pygame.draw.circle(self.screen, color, center, inner_radius)
+            pygame.draw.circle(self.screen, WHITE, center, hole_radius)
+
     def draw_scroll_bar(self, rect, content_height, view_height, scroll_y):
         pygame.draw.rect(self.screen, GRAY, rect, 0, int(scale_x(8)))
         if content_height > view_height:
@@ -30,20 +66,6 @@ class UIManager:
             pygame.draw.rect(self.screen, LIGHT_GRAY, handle_rect, 0, int(scale_x(8)))
             pygame.draw.rect(self.screen, (100,100,100), handle_rect, int(scale_x(2)), int(scale_x(8)))
 
-    def draw_gear(self, rect, color):
-        center = rect.center
-        outer_radius, inner_radius, hole_radius = rect.width / 2 * 0.9, rect.width / 2 * 0.9 * 0.7, rect.width / 2 * 0.9 * 0.4
-        points = []
-        for i in range(8):
-            angle1, angle2 = math.radians(i * 45 - 11.25), math.radians(i * 45 + 11.25)
-            points.append((center[0] + inner_radius * math.cos(angle1), center[1] + inner_radius * math.sin(angle1)))
-            points.append((center[0] + outer_radius * math.cos(angle1), center[1] + outer_radius * math.sin(angle1)))
-            points.append((center[0] + outer_radius * math.cos(angle2), center[1] + outer_radius * math.sin(angle2)))
-            points.append((center[0] + inner_radius * math.cos(angle2), center[1] + inner_radius * math.sin(angle2)))
-        for i in range(0, len(points), 4): pygame.draw.polygon(self.screen, color, points[i:i+4])
-        pygame.draw.circle(self.screen, color, center, inner_radius)
-        pygame.draw.circle(self.screen, WHITE, center, hole_radius)
-    
     def draw_interactive_button(self, rect, text, font, base_color, hover_color, shadow_color):
         is_hovered = rect.collidepoint(pygame.mouse.get_pos())
         shadow_rect = rect.move(scale_x(5), scale_y(5))
@@ -61,9 +83,7 @@ class UIManager:
         clip_rect = rect.inflate(-padding * 2, 0)
         self.screen.set_clip(clip_rect)
 
-        # [최종 수정] 입력창이 활성화(active)되었거나, 글자가 있으면(text) 입력 내용을 표시
         if is_active or text:
-            # 사용자가 입력한 텍스트를 그립니다.
             text_surf = font.render(text, True, BLACK)
             text_rect = text_surf.get_rect()
 
@@ -74,11 +94,9 @@ class UIManager:
             
             self.screen.blit(text_surf, text_rect)
 
-            # 입력창이 활성화 상태일 때만 커서를 그립니다.
             if is_active:
                 cursor_visible = (pygame.time.get_ticks() // 500) % 2 == 1
                 if cursor_visible:
-                    # 텍스트가 없을 때와 있을 때의 커서 위치를 계산합니다.
                     if text:
                         cursor_x = text_rect.right + scale_x(2)
                     else:
@@ -89,7 +107,6 @@ class UIManager:
                     cursor_bottom = rect.centery + cursor_height / 2
                     pygame.draw.line(self.screen, BLACK, (cursor_x, cursor_top), (cursor_x, cursor_bottom), int(scale_x(2)))
         else:
-            # 입력창이 비활성화 상태이고, 글자도 없으면 안내 문구 표시
             placeholder_surf = placeholder_font.render(placeholder_text, True, PLACEHOLDER_COLOR)
             placeholder_rect = placeholder_surf.get_rect(midleft=(clip_rect.left, clip_rect.centery))
             self.screen.blit(placeholder_surf, placeholder_rect)
@@ -148,8 +165,7 @@ class UIManager:
         for surf in surfaces:
             surface.blit(surf, (0, y_offset)); y_offset += surf.get_height() + line_spacing
         return surface
-# ui_manager.py의 UIManager 클래스 내부에 추가
-
+        
     def draw_padlock(self, rect, color):
         """지정된 사각형(rect) 안에 자물쇠 아이콘을 그립니다."""
         # 자물쇠 몸체

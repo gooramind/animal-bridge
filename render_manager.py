@@ -138,7 +138,7 @@ class RenderManager:
         
         self.ui_manager.draw_interactive_button(back_button_rect, button_text, button_font, (220, 220, 220), WHITE, (100, 100, 100))
 
-    def prepare_settings_assets(self, current_res_index, temp_volume, dropdown_open):
+    def prepare_settings_assets(self, current_res_index, dropdown_open):
         settings_bg_rect = pygame.Rect(0, 0, scale_x(1280 - 400), scale_y(720 - 250)); settings_bg_rect.center = (self.width / 2, self.height / 2)
         back_button_rect = pygame.Rect(0, 0, scale_x(220), scale_y(70)); back_button_rect.center = (self.width / 2, settings_bg_rect.bottom - scale_y(60))
         y_pos_res, y_pos_sound = settings_bg_rect.centery - scale_y(50), settings_bg_rect.centery + scale_y(50)
@@ -155,10 +155,14 @@ class RenderManager:
         self.render_background()
         self.ui_manager.draw_overlay((0, 0, 0, 150))
         fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(80), bold=True), 'option': pygame.font.SysFont("malgungothic", scale_font(50)), 'button': pygame.font.SysFont("malgungothic", scale_font(40))}
-        ui = self.prepare_settings_assets(current_res_index, temp_volume, dropdown_open)
+        
+        ui = self.prepare_settings_assets(current_res_index, dropdown_open)
+        
         settings_bg_rect, sound_slider_rect = ui['settings_bg'], ui['sound_slider']
         sound_handle_rect = ui['sound_handle']
-        if not dragging_handle: sound_handle_rect.centerx = sound_slider_rect.left + (sound_slider_rect.width * temp_volume)
+
+        sound_handle_rect.centerx = sound_slider_rect.left + (sound_slider_rect.width * temp_volume)
+
         self.ui_manager.draw_panel(settings_bg_rect, (230, 230, 230, 220), BLACK, 3, 15)
         title_surf = fonts['title'].render("설정", True, BLACK)
         self.screen.blit(title_surf, title_surf.get_rect(center=(settings_bg_rect.centerx, settings_bg_rect.top + scale_y(70))))
@@ -289,7 +293,6 @@ class RenderManager:
         button_font = pygame.font.SysFont("malgungothic", scale_font(25), bold=True)
         self.ui_manager.draw_interactive_button(restart_button_rect, "다시 시작", button_font, (220, 220, 220), WHITE, (100, 100, 100))
 
-        # --- [수정] 스테이지 경과 시간 표시 로직 (밀리초 제외) ---
         elapsed_seconds = (pygame.time.get_ticks() - start_time) / 1000
         minutes = int(elapsed_seconds // 60)
         seconds = int(elapsed_seconds % 60)
@@ -304,7 +307,6 @@ class RenderManager:
         
         self.screen.blit(time_shadow_surf, shadow_rect)
         self.screen.blit(time_surf, time_rect)
-        # --- 로직 끝 ---
 
     def render_dragging_animal(self, dragging_animal: dict):
         mouse_x, mouse_y = pygame.mouse.get_pos()

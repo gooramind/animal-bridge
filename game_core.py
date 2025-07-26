@@ -1,4 +1,4 @@
-# game_core.py (전체 코드)
+# game_core.py
 
 import pygame
 import sys
@@ -52,26 +52,24 @@ def add_ranking_entry(stage, name, blocks, time_seconds, eaten_count):
     if stage_key not in rankings:
         rankings[stage_key] = []
     rankings[stage_key].append(new_entry)
-    rankings[stage_key].sort(key=lambda x: x['time'])
+    
+    rankings[stage_key].sort(key=lambda x: (x['blocks'], x.get('eaten', 0), x['time']))
+    
     rankings[stage_key] = rankings[stage_key][:10]
     save_rankings(rankings)
 
-# --- [추가] 진행 상황 저장/로드 함수 ---
 def load_progress():
     """플레이어의 스테이지 진행 상황을 불러옵니다."""
     try:
         with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
-        # 파일이 없으면 1스테이지만 열린 상태로 새로 시작합니다.
         return {'highest_unlocked_stage': 1}
 
 def save_progress(data):
     """플레이어의 스테이지 진행 상황을 저장합니다."""
     with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
-# --- [추가] 끝 ---
-
 
 def has_player_cleared_stage(player_name, stage_num):
     rankings = load_rankings()
@@ -82,7 +80,7 @@ def has_player_cleared_stage(player_name, stage_num):
     return False
 
 # ======================================================================================
-# 게임 오브젝트 클래스들 (수정 없음)
+# 게임 오브젝트 클래스들
 # ======================================================================================
 class Player:
     def __init__(self, space, pos):
@@ -230,7 +228,7 @@ class Flag:
         pygame.draw.polygon(screen, self.cloth_color, self.cloth_points)
 
 # ======================================================================================
-# 물리 시스템 관련 함수들 (수정 없음)
+# 물리 시스템 관련 함수들
 # ======================================================================================
 def create_static_body(space, pos, size, category, mask):
     body = pymunk.Body(body_type=pymunk.Body.STATIC)
@@ -267,7 +265,7 @@ def get_terrain_rects(terrain_specs):
     return terrain_rects
 
 # ======================================================================================
-# 게임 상태 관리 (수정 없음)
+# 게임 상태 관리
 # ======================================================================================
 class GameState:
     def __init__(self):
@@ -276,7 +274,7 @@ class GameState:
         self.selected_stage = 1
         self.sound_volume = 1.0
         self.current_res_index = 0
-        self.highest_unlocked = 1 # [추가] 클리어한 최고 스테이지
+        self.highest_unlocked = 1
         
     def change_state(self, new_state, data=None):
         self.current_state = new_state
@@ -287,7 +285,7 @@ class GameState:
             if "res_index" in data: self.current_res_index = data["res_index"]
 
 # ======================================================================================
-# 게임 플레이 핵심 로직 (수정 없음)
+# 게임 플레이 핵심 로직
 # ======================================================================================
 def game_play_logic(screen, clock, stage_level, player_name_param, render_manager):
     stage_data = STAGE_DATA.get(str(stage_level), STAGE_DATA["1"])
@@ -462,7 +460,6 @@ class Game:
         pygame.init()
         global WIDTH, HEIGHT
         self.game_state = GameState()
-        # [수정] 게임 시작 시 진행 상황 불러오기
         progress = load_progress()
         self.game_state.highest_unlocked = progress['highest_unlocked_stage']
 
@@ -499,7 +496,6 @@ class Game:
                     clear_info = result[1]
                     cleared_stage = clear_info["stage"]
 
-                    # [수정] 스테이지 클리어 시 다음 스테이지 잠금 해제 로직
                     if cleared_stage == self.game_state.highest_unlocked and cleared_stage < len(STAGE_DATA):
                         self.game_state.highest_unlocked += 1
                         save_progress({'highest_unlocked_stage': self.game_state.highest_unlocked})
@@ -722,7 +718,7 @@ class Game:
         dragging_handle, resolution_dropdown_open = False, False
         temp_volume = self.game_state.sound_volume
         while True:
-            ui_elements = self.render_manager.prepare_settings_assets(self.game_state.current_res_index, temp_volume, resolution_dropdown_open)
+            ui_elements = self.render_manager.prepare_settings_assets(self.game_state.current_res_index, resolution_dropdown_open)
             option_rects = ui_elements.get('option_rects', {})
             for event in pygame.event.get():
                 if event.type == pygame.QUIT: pygame.quit(); sys.exit()
@@ -806,7 +802,6 @@ class Game:
                             for i, rect in enumerate(stage_rects):
                                 visible_rect = rect.move(0, -scroll_y)
                                 stage_num_to_check = i + 1
-                                # [수정] 잠기지 않은 스테이지만 클릭 가능하도록
                                 if visible_rect.collidepoint(event.pos) and stage_num_to_check <= self.game_state.highest_unlocked:
                                     selected_stage_num = stage_num_to_check
                                     audio_manager.play_sound('click')
@@ -837,8 +832,7 @@ class Game:
                             return "game_play", selected_stage_num
                         if not popup_rect.collidepoint(event.pos):
                             selected_stage_num = None
-            
-            # [수정] 렌더러에 잠금 해제 정보를 전달
+
             self.render_manager.render_stage_select(stage_rects, selected_stage_num, back_button_rect, scroll_y, scroll_bar_rect, content_height, view_height, self.game_state.highest_unlocked)
             pygame.display.flip()
             self.clock.tick(FPS)
