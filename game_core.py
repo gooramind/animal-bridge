@@ -1,3 +1,5 @@
+# game_core.py
+
 import pygame
 import sys
 import pymunk
@@ -9,16 +11,6 @@ from settings import *
 from settings import resource_path
 from render_manager import RenderManager
 from audio_manager import audio_manager
-
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-
-    return os.path.join(base_path, relative_path)
 
 # ======================================================================================
 # 크기 및 위치 조절을 위한 헬퍼 함수
@@ -42,13 +34,15 @@ RANKING_FILE = 'ranking.json'
 
 def load_rankings():
     try:
-        with open(RANKING_FILE, 'r', encoding='utf-8') as f:
+        with open(resource_path(RANKING_FILE), 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         num_stages = len(STAGE_DATA)
         return {str(i): [] for i in range(1, num_stages + 1)}
 
 def save_rankings(data):
+    # For a built application, this might need a more robust path (e.g., user data folder)
+    # For now, it saves next to the executable.
     with open(RANKING_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -140,10 +134,9 @@ class AnimalBlock:
         block_shape_str = ANIMAL_DATA.get(self.name, [])
         try:
             image_path = resource_path(os.path.join('assets', 'img', f'{self.name}.png'))
-            print(f"'{self.name}'의 이미지 경로: {image_path}")  # <-- 이 줄 추가
             self.image = pygame.image.load(image_path).convert_alpha()
-        except Exception as e:  # 모든 오류를 확인하기 위해 Exception으로 변경
-            print(f"'{self.name}' 이미지 로드 실패: {e}")  # <-- 이 줄 추가
+        except Exception as e:
+            print(f"'{self.name}' 이미지 로드 실패: {e}")
             self.image = None
 
         if is_ui_element:
@@ -350,7 +343,8 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
                             image_path = resource_path(os.path.join('assets', 'img', f'{ui_animal.name}.png'))
                             original_image = pygame.image.load(image_path).convert_alpha()
                             full_size_image = pygame.transform.scale(original_image, (img_width, img_height))
-                        except FileNotFoundError:
+                        except Exception as e:
+                            print(f"Dragging animal image for '{ui_animal.name}' failed to load: {e}")
                             pass
 
                         dragging_animal = {
@@ -560,23 +554,59 @@ class Game:
 
             self.clock.tick(FPS)
 
+# game_core.py 파일의 Game 클래스 내부에 있는 함수입니다.
+
     def handle_start_menu(self):
         player_name, input_active = "", False
-        fonts = { 'title': pygame.font.SysFont("malgungothic", scale_font(90), bold=True), 'prompt': pygame.font.SysFont("malgungothic", scale_font(60)), 'input': pygame.font.SysFont("malgungothic", scale_font(50)), 'placeholder': pygame.font.SysFont("malgungothic", scale_font(20), italic=True)}
+        
+        fonts = {
+            'title': pygame.font.SysFont("malgungothic", scale_font(90), bold=True),
+            'prompt': pygame.font.SysFont("malgungothic", scale_font(60)),
+            'input': pygame.font.SysFont("malgungothic", scale_font(50)),
+            'placeholder': pygame.font.SysFont("malgungothic", scale_font(20), italic=True)
+        }
+        
         while True:
             input_box = pygame.Rect(WIDTH / 2 - scale_x(200), HEIGHT / 2, scale_x(400), scale_y(80))
             next_button_rect = pygame.Rect(WIDTH / 2 - scale_x(100), HEIGHT / 2 + scale_y(120), scale_x(200), scale_y(80))
+            
             for event in pygame.event.get():
-                if event.type == pygame.QUIT: pygame.quit(); sys.exit()
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    input_active = input_box.collidepoint(event.pos)
-                    if next_button_rect.collidepoint(event.pos) and player_name: audio_manager.play_sound('click'); return player_name
+                    if input_box.collidepoint(event.pos):
+                        input_active = True
+                    else:
+                        input_active = False
+
+                    if input_active:
+                        pygame.key.start_text_input()
+                        # [최종 수정] 입력창의 위치를 Pygame에 알려줍니다.
+                        pygame.key.set_text_input_rect(input_box)
+                    else:
+                        pygame.key.stop_text_input()
+
+                    if next_button_rect.collidepoint(event.pos) and player_name:
+                        pygame.key.stop_text_input()
+                        audio_manager.play_sound('click')
+                        return player_name
+                
+                if event.type == pygame.TEXTINPUT and input_active:
+                    player_name += event.text
+
                 if event.type == pygame.KEYDOWN and input_active:
-                    if event.key == pygame.K_RETURN and player_name: audio_manager.play_sound('click'); return player_name
-                    elif event.key == pygame.K_BACKSPACE: player_name = player_name[:-1]
-                    else: player_name += event.unicode
+                    if event.key == pygame.K_RETURN and player_name:
+                        pygame.key.stop_text_input()
+                        audio_manager.play_sound('click')
+                        return player_name
+                    elif event.key == pygame.K_BACKSPACE:
+                        player_name = player_name[:-1]
+                        
             self.render_manager.render_start_menu(player_name, input_active, input_box, next_button_rect, fonts)
-            pygame.display.flip(); self.clock.tick(FPS)
+            pygame.display.flip()
+            self.clock.tick(FPS)
 
     def handle_main_menu(self):
         fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(90), bold=True), 'name': pygame.font.SysFont("malgungothic", scale_font(30)), 'button': pygame.font.SysFont("malgungothic", scale_font(60))}

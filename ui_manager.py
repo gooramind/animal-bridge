@@ -56,13 +56,51 @@ class UIManager:
     
     def draw_text_input(self, rect, text, font, placeholder_text, placeholder_font, is_active):
         pygame.draw.rect(self.screen, GRAY, rect, 0, int(scale_x(5)))
-        placeholder_surf = placeholder_font.render(placeholder_text, True, PLACEHOLDER_COLOR)
-        placeholder_rect = placeholder_surf.get_rect(midleft=(rect.x + scale_x(15), rect.centery))
-        if not text: 
-            self.screen.blit(placeholder_surf, placeholder_rect)
+
+        padding = scale_x(15)
+        clip_rect = rect.inflate(-padding * 2, 0)
+        
+        # 텍스트 표면과 위치를 먼저 결정합니다.
+        if not text:
+            text_surf = placeholder_font.render(placeholder_text, True, PLACEHOLDER_COLOR)
+            text_rect = text_surf.get_rect(midleft=(clip_rect.left, clip_rect.centery))
         else:
             text_surf = font.render(text, True, BLACK)
-            self.screen.blit(text_surf, text_surf.get_rect(midleft=(rect.x + scale_x(15), rect.centery)))
+            text_rect = text_surf.get_rect()
+            if text_rect.width > clip_rect.width:
+                text_rect.midright = (clip_rect.right, clip_rect.centery)
+            else:
+                text_rect.midleft = (clip_rect.left, clip_rect.centery)
+
+        # 클리핑 영역을 설정하고 텍스트를 그립니다.
+        self.screen.set_clip(clip_rect)
+        self.screen.blit(text_surf, text_rect)
+
+        # --- 커서 깜빡임 로직 ---
+        if is_active:
+            # 0.5초(500ms)마다 커서가 깜빡이도록 설정
+            cursor_visible = (pygame.time.get_ticks() // 500) % 2 == 1
+            if cursor_visible:
+                # 커서의 위치 계산
+                if text:
+                    # 텍스트가 있으면 텍스트 바로 오른쪽에 위치
+                    cursor_x = text_rect.right + scale_x(2)
+                else:
+                    # 텍스트가 없으면 플레이스홀더 왼쪽에 위치
+                    cursor_x = text_rect.left
+                
+                # 커서의 세로 길이 및 위치 설정
+                cursor_height = font.get_height() * 0.9
+                cursor_top = rect.centery - cursor_height / 2
+                cursor_bottom = rect.centery + cursor_height / 2
+
+                # 커서 그리기
+                pygame.draw.line(self.screen, BLACK, (cursor_x, cursor_top), (cursor_x, cursor_bottom), int(scale_x(2)))
+        
+        # 다른 UI에 영향을 주지 않도록 클리핑 해제
+        self.screen.set_clip(None)
+        
+        # 활성화 테두리 그리기
         pygame.draw.rect(self.screen, ACTIVE_BORDER_COLOR if is_active else GRAY, rect, int(scale_x(3)), int(scale_x(5)))
     
     def draw_panel(self, rect, background_color, border_color, border_width=3, border_radius=15):
