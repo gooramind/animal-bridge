@@ -41,8 +41,6 @@ def load_rankings():
         return {str(i): [] for i in range(1, num_stages + 1)}
 
 def save_rankings(data):
-    # For a built application, this might need a more robust path (e.g., user data folder)
-    # For now, it saves next to the executable.
     with open(RANKING_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -554,8 +552,6 @@ class Game:
 
             self.clock.tick(FPS)
 
-# game_core.py 파일의 Game 클래스 내부에 있는 함수입니다.
-
     def handle_start_menu(self):
         player_name, input_active = "", False
         
@@ -565,6 +561,8 @@ class Game:
             'input': pygame.font.SysFont("malgungothic", scale_font(50)),
             'placeholder': pygame.font.SysFont("malgungothic", scale_font(20), italic=True)
         }
+        
+        pygame.key.set_repeat(500, 50)
         
         while True:
             input_box = pygame.Rect(WIDTH / 2 - scale_x(200), HEIGHT / 2, scale_x(400), scale_y(80))
@@ -576,6 +574,12 @@ class Game:
                     sys.exit()
                 
                 if event.type == pygame.MOUSEBUTTONDOWN:
+                    if next_button_rect.collidepoint(event.pos) and player_name:
+                        pygame.key.set_repeat(0)
+                        pygame.key.stop_text_input()
+                        audio_manager.play_sound('click')
+                        return player_name
+
                     if input_box.collidepoint(event.pos):
                         input_active = True
                     else:
@@ -583,21 +587,16 @@ class Game:
 
                     if input_active:
                         pygame.key.start_text_input()
-                        # [최종 수정] 입력창의 위치를 Pygame에 알려줍니다.
                         pygame.key.set_text_input_rect(input_box)
                     else:
                         pygame.key.stop_text_input()
-
-                    if next_button_rect.collidepoint(event.pos) and player_name:
-                        pygame.key.stop_text_input()
-                        audio_manager.play_sound('click')
-                        return player_name
                 
                 if event.type == pygame.TEXTINPUT and input_active:
                     player_name += event.text
 
                 if event.type == pygame.KEYDOWN and input_active:
                     if event.key == pygame.K_RETURN and player_name:
+                        pygame.key.set_repeat(0)
                         pygame.key.stop_text_input()
                         audio_manager.play_sound('click')
                         return player_name
@@ -613,15 +612,27 @@ class Game:
         while True:
             button_rects = {'start': pygame.Rect(WIDTH/2 - scale_x(150), HEIGHT/2, scale_x(300), scale_y(80)), 'desc': pygame.Rect(WIDTH/2 - scale_x(200), HEIGHT/2 + scale_y(100), scale_x(180), scale_y(70)), 'rank': pygame.Rect(WIDTH/2 + scale_x(20), HEIGHT/2 + scale_y(100), scale_x(180), scale_y(70)), 'settings': pygame.Rect(scale_x(30), scale_y(30), scale_x(50), scale_y(50))}
             for event in pygame.event.get():
-                if event.type == pygame.QUIT: pygame.quit(); sys.exit()
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if button_rects['start'].collidepoint(event.pos): audio_manager.play_sound('click'); return "stage_select", None
-                    if button_rects['desc'].collidepoint(event.pos): audio_manager.play_sound('click'); return "description", None
-                    if button_rects['settings'].collidepoint(event.pos): audio_manager.play_sound('click'); return "settings", None
-                    if button_rects['rank'].collidepoint(event.pos): audio_manager.play_sound('click'); return "ranking", None
-                if event.type == pygame.KEYDOWN and event.key == pygame.K_TAB: return "start_menu", None
+                    if button_rects['start'].collidepoint(event.pos):
+                        audio_manager.play_sound('click')
+                        return "stage_select", None
+                    if button_rects['desc'].collidepoint(event.pos):
+                        audio_manager.play_sound('click')
+                        return "description", None
+                    if button_rects['settings'].collidepoint(event.pos):
+                        audio_manager.play_sound('click')
+                        return "settings", None
+                    if button_rects['rank'].collidepoint(event.pos):
+                        audio_manager.play_sound('click')
+                        return "ranking", None
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_TAB:
+                    return "start_menu", None
             self.render_manager.render_main_menu(self.game_state.player_name, button_rects, fonts)
-            pygame.display.flip(); self.clock.tick(FPS)
+            pygame.display.flip()
+            self.clock.tick(FPS)
 
     def handle_description(self):
         scroll_y = 0
