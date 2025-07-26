@@ -203,7 +203,7 @@ class RenderManager:
                 self.screen.blit(fonts['rank'].render(f"먹힘: {record.get('eaten', 0)}개", True, (50, 50, 50)), fonts['rank'].render(f"먹힘: {record.get('eaten', 0)}개", True, (50,50,50)).get_rect(midright=(entry_rect.right - scale_x(30), entry_rect.centery)))
         self.ui_manager.draw_interactive_button(back_button, "뒤로 가기", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
 
-    def render_stage_select(self, stage_rects, selected_stage_num, back_button_rect, scroll_y, scroll_bar_rect, content_height, view_height):
+    def render_stage_select(self, stage_rects, selected_stage_num, back_button_rect, scroll_y, scroll_bar_rect, content_height, view_height, highest_unlocked: int):
         self.render_background()
         fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(80), bold=True), 
                  'stage_title': pygame.font.SysFont("malgungothic", scale_font(40), bold=True),
@@ -219,17 +219,29 @@ class RenderManager:
             visible_rect = rect.move(0, -scroll_y)
 
             if visible_rect.bottom > scale_y(180) and visible_rect.top < self.height:
-                is_hovered = visible_rect.collidepoint(pygame.mouse.get_pos())
+                is_locked = stage_num > highest_unlocked
+                is_hovered = visible_rect.collidepoint(pygame.mouse.get_pos()) and not is_locked
+
                 base_color = (240, 240, 240)
                 hover_color = WHITE
-                self.ui_manager.draw_interactive_button(visible_rect, "", fonts['stage_title'], base_color, hover_color, (100,100,100))
+                self.ui_manager.draw_interactive_button(visible_rect, "", fonts['stage_title'], base_color, hover_color if is_hovered else base_color, (100,100,100))
 
-                num_text = fonts['stage_num'].render(f"{stage_num}", True, BLACK)
+                text_color = BLACK if not is_locked else GRAY
+
+                num_text = fonts['stage_num'].render(f"{stage_num}", True, text_color)
                 self.screen.blit(num_text, num_text.get_rect(center=(visible_rect.left + scale_x(60), visible_rect.centery)))
 
                 stage_name = STAGE_DATA.get(str(stage_num), {}).get("name", f"스테이지 {stage_num}")
-                name_text = fonts['stage_title'].render(stage_name, True, BLACK)
+                name_text = fonts['stage_title'].render(stage_name, True, text_color)
                 self.screen.blit(name_text, name_text.get_rect(midleft=(visible_rect.left + scale_x(120), visible_rect.centery)))
+                
+                if is_locked:
+                    self.ui_manager.draw_disabled_overlay(visible_rect, 100)
+                    padlock_area = pygame.Rect(0, 0, scale_x(50), scale_y(50))
+                    padlock_area.centery = visible_rect.centery
+                    padlock_area.right = visible_rect.right - scale_x(30)
+                    self.ui_manager.draw_padlock(padlock_area, (40, 40, 40))
+
 
         self.ui_manager.draw_scroll_bar(scroll_bar_rect, content_height, view_height, scroll_y)
 
@@ -247,8 +259,6 @@ class RenderManager:
 
         self.ui_manager.draw_interactive_button(back_button_rect, "뒤로 가기", fonts['feature'], (220, 220, 220), WHITE, (100, 100, 100))
     
-# render_manager.py의 RenderManager 클래스 내부에 있는 함수입니다.
-
     def render_game_ui(self, ui_animals: list, dragging_animal: Optional[dict], animal_usage_counts: dict, stats: dict, fonts: dict, restart_button_rect: pygame.Rect, start_time: int):
         self.ui_manager.draw_game_ui_panel(pygame.Rect(0, self.height - scale_y(120), self.width, scale_y(120)))
         

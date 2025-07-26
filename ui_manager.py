@@ -148,3 +148,16 @@ class UIManager:
         for surf in surfaces:
             surface.blit(surf, (0, y_offset)); y_offset += surf.get_height() + line_spacing
         return surface
+# ui_manager.py의 UIManager 클래스 내부에 추가
+
+    def draw_padlock(self, rect, color):
+        """지정된 사각형(rect) 안에 자물쇠 아이콘을 그립니다."""
+        # 자물쇠 몸체
+        body_rect = pygame.Rect(0, 0, rect.width * 0.7, rect.height * 0.6)
+        body_rect.center = (rect.centerx, rect.centery + rect.height * 0.1)
+        pygame.draw.rect(self.screen, color, body_rect, 0, int(scale_x(8)))
+
+        # 자물쇠 고리
+        shackle_rect = pygame.Rect(0, 0, rect.width * 0.4, rect.height * 0.5)
+        shackle_rect.center = (rect.centerx, body_rect.top)
+        pygame.draw.arc(self.screen, color, shackle_rect, 0, 3.14, int(scale_x(7)))
