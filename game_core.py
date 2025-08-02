@@ -141,16 +141,21 @@ class AnimalBlock:
     def __init__(self, space, pos, animal_name, block_scale, angle_degrees=0, is_ui_element=False):
         self.name, self.is_ui_element, self.head_part_offsets = animal_name, is_ui_element, []
         self.image = None
+        self.is_dying = False
+        self.death_time = 0
+        self.death_duration = 300
+        
         hash_value = hash(animal_name)
         r, g, b = (hash_value & 0xFF0000) >> 16, (hash_value & 0x00FF00) >> 8, hash_value & 0x0000FF
         self.icon_color, self.body_color, self.face_color, self.eye_color = (r, g, b), (65, 105, 225, 255), (255, 165, 0, 255), BLACK
         block_shape_str = ANIMAL_DATA.get(self.name, [])
         try:
             image_path = resource_path(os.path.join('assets', 'img', f'{self.name}.png'))
-            self.image = pygame.image.load(image_path).convert_alpha()
+            self.original_image = pygame.image.load(image_path).convert_alpha()
+            self.image = self.original_image
         except Exception as e:
             print(f"'{self.name}' 이미지 로드 실패: {e}")
-            self.image = None
+            self.image = self.original_image = None
 
         if is_ui_element:
             shape_height = len(block_shape_str)
@@ -168,7 +173,7 @@ class AnimalBlock:
                 
             self.rect = pygame.Rect(pos[0], pos[1], ui_width, ui_height)
             if self.image:
-                self.image = pygame.transform.scale(self.image, (int(ui_width), int(ui_height)))
+                self.image = pygame.transform.scale(self.original_image, (int(ui_width), int(ui_height)))
             return
 
         self.body, self.body.position = pymunk.Body(body_type=pymunk.Body.DYNAMIC), pos
@@ -180,7 +185,8 @@ class AnimalBlock:
         
         scale, self.shapes, head_part_local_coords = block_scale, [], []
 
-        if self.image: self.image = pygame.transform.scale(self.image, (int(width * scale), int(height * scale)))
+        if self.image: 
+            self.image = pygame.transform.scale(self.original_image, (int(width * scale), int(height * scale)))
         
         for r_index, row in enumerate(block_shape_str):
             for c_index, char in enumerate(row):
@@ -202,6 +208,19 @@ class AnimalBlock:
         space.add(self.body, *self.shapes)
 
     def draw(self, screen):
+        if self.is_dying:
+            elapsed = pygame.time.get_ticks() - self.death_time
+            if elapsed < self.death_duration:
+                progress = 1.0 - (elapsed / self.death_duration)
+                width = int(self.image.get_width() * progress)
+                height = int(self.image.get_height() * progress)
+                if width > 0 and height > 0:
+                    scaled_image = pygame.transform.scale(self.image, (width, height))
+                    rotated_image = pygame.transform.rotate(scaled_image, math.degrees(self.body.angle) * -1)
+                    rect = rotated_image.get_rect(center=self.body.position)
+                    screen.blit(rotated_image, rect.topleft)
+            return
+
         if self.image:
             rotated_image = pygame.transform.rotate(self.image, math.degrees(self.body.angle) * -1)
             rect = rotated_image.get_rect(center=self.body.position)
@@ -215,6 +234,11 @@ class AnimalBlock:
         left_eye_pos, right_eye_pos = (head_world_pos.x - scale_x(8), head_world_pos.y - scale_y(5)), (head_world_pos.x + scale_x(8), head_world_pos.y - scale_y(5))
         pygame.draw.circle(screen, self.eye_color, left_eye_pos, eye_radius)
         pygame.draw.circle(screen, self.eye_color, right_eye_pos, eye_radius)
+
+    def start_dying(self):
+        if not self.is_dying:
+            self.is_dying = True
+            self.death_time = pygame.time.get_ticks()
 
 class Flag:
     def __init__(self, pos):
@@ -290,7 +314,9 @@ class GameState:
 def game_play_logic(screen, clock, stage_level, player_name_param, render_manager):
     stage_data = STAGE_DATA.get(str(stage_level), STAGE_DATA["1"])
     available_animals, terrain_specs = stage_data["available_animals"], stage_data["terrain"]
-    
+    has_hazard_floor = stage_data.get("has_hazard_floor", False)
+    hazard_y = HEIGHT - scale_y(20)
+
     space = pymunk.Space()
     space.gravity = (0, scale_y(981))
     
@@ -403,20 +429,26 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         target_vx = -move_speed if keys[pygame.K_a] else move_speed if keys[pygame.K_d] else 0
         player.set_horizontal_velocity(target_vx)
         
-        if player.body.position.y > HEIGHT + scale_y(50):
+        player_death_y = hazard_y if has_hazard_floor else HEIGHT + scale_y(50)
+        if player.body.position.y > player_death_y:
             player.respawn()
             audio_manager.play_sound('error')
 
-        animals_to_remove = [animal for animal in game_objects if animal.body.position.y > HEIGHT + scale_y(100)]
-        if animals_to_remove:
-            for animal in animals_to_remove:
-                if animal in game_objects:
-                    game_objects.remove(animal)
+        animal_death_y = hazard_y if has_hazard_floor else HEIGHT + scale_y(100)
+        
+        for animal in game_objects:
+            if not animal.is_dying and animal.body.position.y > animal_death_y:
+                animal.start_dying()
+                audio_manager.play_sound('destroy')
+                if animal.body in space.bodies:
                     space.remove(animal.body, *animal.shapes)
 
+        current_time = pygame.time.get_ticks()
+        game_objects = [animal for animal in game_objects if not (animal.is_dying and current_time - animal.death_time > animal.death_duration)]
+        
         head_part_eating_range = scale_x(40)
-        for carnivore in [obj for obj in game_objects if obj.name in CARNIVORES]:
-            for prey in [obj for obj in game_objects if obj not in to_be_eaten and obj.name not in CARNIVORES and obj != carnivore]:
+        for carnivore in [obj for obj in game_objects if obj.name in CARNIVORES and not obj.is_dying]:
+            for prey in [obj for obj in game_objects if obj not in to_be_eaten and obj.name not in CARNIVORES and obj != carnivore and not obj.is_dying]:
                 for head_offset in carnivore.head_part_offsets:
                     if prey.shapes and min(s.point_query(carnivore.body.local_to_world(head_offset)).distance for s in prey.shapes) < head_part_eating_range:
                         to_be_eaten.append(prey); break
@@ -424,6 +456,10 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         
         render_manager.render_background("tilemap")
         render_manager.render_terrain(terrain_rects)
+
+        if has_hazard_floor:
+            render_manager.render_hazard_floor()
+        
         player.draw(screen)
         for animal in game_objects: animal.draw(screen)
         goal_flag.draw(screen)
@@ -446,7 +482,11 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         if to_be_eaten:
             eaten_blocks_count += len(to_be_eaten)
             for animal in to_be_eaten:
-                if animal in game_objects: space.remove(animal.body, *animal.shapes); game_objects.remove(animal)
+                if animal in game_objects: 
+                    animal.start_dying()
+                    audio_manager.play_sound('destroy')
+                    if animal.body in space.bodies:
+                        space.remove(animal.body, *animal.shapes)
             to_be_eaten.clear()
         
         pygame.display.flip()

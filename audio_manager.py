@@ -1,28 +1,24 @@
-# audio_manager.py - 오디오 관리
+# audio_manager.py
 
 import pygame
 import os
-from typing import Dict, Optional
+import sys
 from settings import resource_path
 
 class AudioManager:
     def __init__(self, sound_volume: float = 1.0, music_volume: float = 1.0):
         try:
             pygame.mixer.init()
-            # 성공 메시지를 명확하게 출력
             freq, size, channels = pygame.mixer.get_init()
             print(f"✓ Pygame Mixer 초기화 성공! (주파수: {freq}, 채널: {channels})")
         except pygame.error as e:
-            # 실패 시 오류 메시지 출력
             print(f"✗ Pygame Mixer 초기화 실패: {e}")
 
         self.sound_volume = sound_volume
         self.music_volume = music_volume
         
-        # 사운드 캐시
-        self.sounds: Dict[str, pygame.mixer.Sound] = {}
+        self.sounds: dict[str, pygame.mixer.Sound] = {}
         
-        # 기본 사운드 파일 경로
         self.sound_paths = {
             'click': resource_path('assets/Sound/select_002.ogg'),
             'jump': resource_path('assets/Sound/confirmation_001.ogg'),
@@ -30,10 +26,10 @@ class AudioManager:
             'game_over': resource_path('assets/Sound/error_005.ogg'),
             'card_slide': resource_path('assets/Sound/card-slide-2.ogg'),
             'error': resource_path('assets/Sound/error_008.ogg'),
-            'tap': resource_path('assets/Sound/tap-a.ogg')
+            'tap': resource_path('assets/Sound/tap-a.ogg'),
+            'destroy': resource_path('assets/Sound/destroy.ogg')
         }
         
-        # 사운드 로드
         self.load_sounds()
     
     def load_sounds(self):
@@ -48,7 +44,7 @@ class AudioManager:
                     self.sounds[name] = sound
                     print("  -> ✓ 성공!")
                 else:
-                    print("  -> ✗ 실패: 파일을 찾을 수 없습니다.")
+                    print(f"  -> ✗ 실패: 파일을 찾을 수 없습니다: {path}")
             except pygame.error as e:
                 print(f"  -> ✗ 실패: Pygame 오류 - {e}")
         print("--- 사운드 로딩 완료 ---\n")

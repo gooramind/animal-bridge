@@ -1,4 +1,4 @@
-# settings.py
+# settings.py (전체 코드)
 
 import pygame
 import json
@@ -11,15 +11,12 @@ import sys
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
-        # PyInstaller one-file/one-folder bundle
         base_path = sys._MEIPASS
     except Exception:
-        # Running from source
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
 # ======================================================================================
-
 
 # --- 기본 설정 ---
 WIDTH, HEIGHT = 1280, 720
@@ -27,37 +24,31 @@ BASE_WIDTH, BASE_HEIGHT = 1280, 720
 FPS = 60
 
 # --- 타일 크기 관련 상수 ---
-BASE_TILE_SIZE = 36  # 기본 해상도(1280x720)에서의 타일 크기
+BASE_TILE_SIZE = 36
 
 def get_current_tile_size():
-    """현재 해상도에 맞는 타일 크기 계산"""
     scale_factor = WIDTH / BASE_WIDTH
     return int(BASE_TILE_SIZE * scale_factor)
 
-# 초기 타일 크기 (나중에 update_tile_size()로 업데이트됨)
 TILE_SIZE = BASE_TILE_SIZE
 
 # --- 타일 크기에 맞춘 헬퍼 함수 ---
 def align_to_tile_size(value, tile_size=None):
-    """값을 타일 크기의 배수로 조정 (가장 가까운 배수로 반올림)"""
     if tile_size is None:
         tile_size = get_current_tile_size()
     return round(value / tile_size) * tile_size
 
 def align_to_tile_size_down(value, tile_size=None):
-    """값을 타일 크기의 배수로 조정 (내림)"""
     if tile_size is None:
         tile_size = get_current_tile_size()
     return (value // tile_size) * tile_size
 
 def align_to_tile_size_up(value, tile_size=None):
-    """값을 타일 크기의 배수로 조정 (올림)"""
     if tile_size is None:
         tile_size = get_current_tile_size()
     return ((value + tile_size - 1) // tile_size) * tile_size
 
 def update_tile_size():
-    """해상도 변경 시 타일 크기 업데이트"""
     global TILE_SIZE
     TILE_SIZE = get_current_tile_size()
 
@@ -103,7 +94,6 @@ CARNIVORES = ["tiger", "lion", "crocodile", "python", "bear"]
 
 # --- JSON 파일에서 동물 블록 데이터 불러오기 ---
 try:
-    # resource_path를 사용하여 파일 경로를 지정합니다.
     with open(resource_path('final_animal_blocks.json'), 'r') as f:
         ANIMAL_DATA = json.load(f)
 except FileNotFoundError:
@@ -111,7 +101,7 @@ except FileNotFoundError:
     ANIMAL_DATA = {}
 
 # ======================================================================================
-# === 스테이지별 설정 데이터 (5, 6, 9 스테이지 재설계) ===
+# === 스테이지별 설정 데이터 ===
 # ======================================================================================
 STAGE_DATA = {
     "1": {
@@ -169,9 +159,10 @@ STAGE_DATA = {
         "goal_pos": (1050, 524)
     },
     "10": {
-        "name": "나락의 다리",
+        "name": "마지막 시련: 가시밭길",
         "available_animals": ["giraffe", "python", "sloth", "hippo", "bear"],
-        "terrain": [ (150, 300, 288, 36), (WIDTH/2, 680, 144, 36), (1130, 300, 288, 36) ],
-        "goal_pos": (1180, 282)
+        "terrain": [ (150, 400, 288, 36), (WIDTH/2, 350, 144, 36), (1130, 400, 288, 36) ],
+        "goal_pos": (1180, 332),
+        "has_hazard_floor": True # <-- [추가] 이 스테이지에 가시 바닥이 있음을 명시
     }
 }

@@ -35,6 +35,32 @@ class RenderManager:
     def render_terrain(self, terrain_rects: List[pygame.Rect]):
         self.tilemap_manager.terrain_renderer.render_terrain(self.screen, terrain_rects)
 
+    def render_hazard_floor(self):
+        """화면 하단에 가시 바닥을 그립니다."""
+        spike_color = (60, 60, 65)
+        spike_shadow_color = (40, 40, 45)
+        spike_width = scale_x(30)
+        spike_height = scale_y(30)
+        num_spikes = self.width // spike_width + 2
+
+        for i in range(num_spikes):
+            x = i * spike_width
+            base_y = self.height
+            
+            shadow_points = [
+                (x - spike_width / 2 + 2, base_y),
+                (x + spike_width / 2 + 2, base_y),
+                (x + 2, base_y - spike_height)
+            ]
+            pygame.draw.polygon(self.screen, spike_shadow_color, shadow_points)
+
+            points = [
+                (x - spike_width / 2, base_y),
+                (x + spike_width / 2, base_y),
+                (x, base_y - spike_height)
+            ]
+            pygame.draw.polygon(self.screen, spike_color, points)
+
     def render_stage1_tutorial(self):
         """1스테이지 시작 시 튜토리얼 팝업을 그립니다."""
         self.ui_manager.draw_overlay((0, 0, 0, 180))
