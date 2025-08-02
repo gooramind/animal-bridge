@@ -59,7 +59,6 @@ def add_ranking_entry(stage, name, blocks, time_seconds, eaten_count):
     save_rankings(rankings)
 
 def load_progress():
-    """플레이어의 스테이지 진행 상황을 불러옵니다."""
     try:
         with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -67,7 +66,6 @@ def load_progress():
         return {'highest_unlocked_stage': 1}
 
 def save_progress(data):
-    """플레이어의 스테이지 진행 상황을 저장합니다."""
     with open(PROGRESS_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -361,7 +359,11 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
             if player_is_dead: continue
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_TAB: audio_manager.play_sound('click'); return "stage_select"
-                if event.key == pygame.K_SPACE: player.jump()
+                
+                # [수정] 점프 키에 방향키 위(UP) 추가
+                if event.key == pygame.K_SPACE or event.key == pygame.K_UP:
+                    player.jump()
+
                 if event.key == pygame.K_r and dragging_animal: dragging_animal["angle_degrees"] = (dragging_animal["angle_degrees"] + 90) % 360
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 if restart_button_rect.collidepoint(event.pos):
@@ -425,8 +427,15 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
             continue
             
         player.update(space)
-        keys, move_speed = pygame.key.get_pressed(), scale_x(250)
-        target_vx = -move_speed if keys[pygame.K_a] else move_speed if keys[pygame.K_d] else 0
+        
+        # [수정] 이동 키에 방향키(LEFT, RIGHT) 추가
+        keys = pygame.key.get_pressed()
+        move_speed = scale_x(250)
+        target_vx = 0
+        if keys[pygame.K_a] or keys[pygame.K_LEFT]:
+            target_vx = -move_speed
+        elif keys[pygame.K_d] or keys[pygame.K_RIGHT]:
+            target_vx = move_speed
         player.set_horizontal_velocity(target_vx)
         
         player_death_y = hazard_y if has_hazard_floor else HEIGHT + scale_y(50)
