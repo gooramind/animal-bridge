@@ -15,6 +15,7 @@ from audio_manager import audio_manager
 # ======================================================================================
 # 크기 및 위치 조절을 위한 헬퍼 함수
 # ======================================================================================
+WIDTH, HEIGHT = 1280, 720
 BASE_WIDTH, BASE_HEIGHT = 1280, 720
 
 def scale_x(value):
@@ -290,7 +291,6 @@ class GameState:
         self.player_name = ""
         self.selected_stage = 1
         self.sound_volume = 1.0
-        self.current_res_index = 0
         self.highest_unlocked = 1
         
     def change_state(self, new_state, data=None):
@@ -299,7 +299,6 @@ class GameState:
             if "player_name" in data: self.player_name = data["player_name"]
             if "selected_stage" in data: self.selected_stage = data["selected_stage"]
             if "volume" in data: self.sound_volume = data["volume"]
-            if "res_index" in data: self.current_res_index = data["res_index"]
 
 # ======================================================================================
 # 게임 내 도움말 팝업 함수
@@ -353,7 +352,7 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
     space = pymunk.Space()
     space.gravity = (0, scale_y(981))
     
-    terrain_bodies = setup_level(space, terrain_specs)
+    setup_level(space, terrain_specs)
     
     player = Player(space, (scale_x(80), scale_y(280)))
     
@@ -379,8 +378,6 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         goal_area = pygame.Rect(goal_flag.pole_rect.right - scale_x(10), goal_flag.pole_rect.top, scale_x(40), scale_y(60))
         restart_button_rect = pygame.Rect(scale_x(20), scale_y(20), scale_x(150), scale_y(50))
         block_scale = WIDTH / (BASE_WIDTH / 56.25)
-        hazard_y = HEIGHT - scale_y(20)
-        ui_panel_height, icon_cell_width = scale_y(120), scale_x(160)
         
         help_button_rect = pygame.Rect(restart_button_rect.right + scale_x(10), scale_y(20), scale_y(50), scale_y(50))
         help_font = pygame.font.SysFont("malgungothic", scale_font(40), bold=True)
@@ -398,7 +395,7 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
             ui_animal.rect.size = (ui_width, ui_height)
             if ui_animal.original_image: ui_animal.image = pygame.transform.scale(ui_animal.original_image, (int(ui_width), int(ui_height)))
             row, col = i // 7, i % 7
-            cell_center_x, cell_center_y = scale_x(140) + col * icon_cell_width, HEIGHT - ui_panel_height + scale_y(30) + row * scale_y(60)
+            cell_center_x, cell_center_y = scale_x(140) + col * scale_x(160), HEIGHT - scale_y(120) + scale_y(30) + row * scale_y(60)
             ui_animal.rect.center = (cell_center_x, cell_center_y)
 
         for event in pygame.event.get():
@@ -447,11 +444,34 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         elif keys[pygame.K_d] or keys[pygame.K_RIGHT]: target_vx = move_speed
         player.set_horizontal_velocity(target_vx)
         
-        if player.body.position.y > (hazard_y if has_hazard_floor else HEIGHT + scale_y(50)): player.respawn(); audio_manager.play_sound('error')
+        hazard_y = HEIGHT - scale_y(20)
+        player_death_y = hazard_y if has_hazard_floor else HEIGHT + scale_y(50)
+        if player.body.position.y > player_death_y:
+            player.respawn(); audio_manager.play_sound('error')
+
         for animal in game_objects[:]:
-            if not animal.is_dying and animal.body.position.y > (hazard_y if has_hazard_floor else HEIGHT + scale_y(100)):
-                animal.start_dying(); audio_manager.play_sound('destroy')
-                if animal.body in space.bodies: space.remove(animal.body, *animal.shapes)
+            if not animal.is_dying:
+                should_die = False
+                if has_hazard_floor:
+                    for shape in animal.shapes:
+                        # --- [수정] 각 물리 조각(shape)의 모든 꼭짓점(vertex)을 확인하여 사망 판정 ---
+                        world_verts = [shape.body.local_to_world(v) for v in shape.get_vertices()]
+                        if any(v.y > hazard_y for v in world_verts):
+                            should_die = True
+                            break
+                elif animal.body.position.y > HEIGHT + scale_y(100):
+                    should_die = True
+                
+                if should_die:
+                    animal.start_dying()
+                    # destroy 사운드가 없을 경우를 대비해 예외 처리
+                    if audio_manager.sounds.get('destroy'):
+                        audio_manager.play_sound('destroy')
+                    if animal.body in space.bodies:
+                        space.remove(animal.body, *animal.shapes)
+        # --- 수정 끝 ---
+
+
         game_objects = [a for a in game_objects if not (a.is_dying and pygame.time.get_ticks() - a.death_time > a.death_duration)]
         for carnivore in [o for o in game_objects if o.name in CARNIVORES and not o.is_dying]:
             for prey in [o for o in game_objects if o.name not in CARNIVORES and o != carnivore and not o.is_dying]:
@@ -460,7 +480,10 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         if to_be_eaten:
             eaten_blocks_count += len(to_be_eaten)
             for animal in to_be_eaten:
-                if animal in game_objects: animal.start_dying(); audio_manager.play_sound('destroy')
+                if animal in game_objects: 
+                    animal.start_dying()
+                    if audio_manager.sounds.get('destroy'):
+                        audio_manager.play_sound('destroy')
                 if animal.body in space.bodies: space.remove(animal.body, *animal.shapes)
             to_be_eaten.clear()
 
@@ -472,25 +495,17 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         stats = {"used": blocks_used_count, "eaten": eaten_blocks_count, "time_str": f"{(pygame.time.get_ticks() - start_time) / 1000:.2f}s"}
         render_manager.render_game_ui(ui_animals, dragging_animal, animal_usage_counts, stats, None, restart_button_rect, start_time)
         
-        # --- [수정] 새 디자인의 도움말 버튼 그리기 ---
-        btn_center = help_button_rect.center
-        btn_radius = help_button_rect.width // 2
-        shadow_pos = (btn_center[0] + scale_x(2), btn_center[1] + scale_y(2))
+        shadow_rect = help_button_rect.move(scale_x(3), scale_y(3))
+        pygame.draw.rect(screen, (50, 50, 50), shadow_rect, border_radius=10)
         
-        base_color = (220, 220, 220)
-        hover_color = (255, 255, 255)
-        border_color = (100, 100, 100)
-        
+        base_color = (200, 200, 200)
+        hover_color = (230, 230, 230)
         current_color = hover_color if help_button_hover else base_color
+        pygame.draw.rect(screen, current_color, help_button_rect, border_radius=10)
 
-        pygame.draw.circle(screen, (50, 50, 50), shadow_pos, btn_radius) # 그림자
-        pygame.draw.circle(screen, current_color, btn_center, btn_radius) # 버튼 몸통
-        pygame.draw.circle(screen, border_color, btn_center, btn_radius, 2) # 테두리
-        
         help_text_surf = help_font.render("?", True, BLACK)
-        help_text_rect = help_text_surf.get_rect(center=btn_center)
+        help_text_rect = help_text_surf.get_rect(center=help_button_rect.center)
         screen.blit(help_text_surf, help_text_rect)
-        # --- 수정 끝 ---
 
         if goal_area.collidepoint(player.body.position):
             clear_time_seconds = (pygame.time.get_ticks() - start_time) / 1000
@@ -511,26 +526,16 @@ class Game:
         progress = load_progress()
         self.game_state.highest_unlocked = progress['highest_unlocked_stage']
 
-        WIDTH, HEIGHT = RESOLUTIONS[self.game_state.current_res_index]
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+        WIDTH, HEIGHT = 1280, 720
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
+        
         pygame.display.set_caption("Animal Bridge")
         self.clock = pygame.time.Clock()
         self.render_manager = RenderManager(self.screen)
         audio_manager.set_sound_volume(self.game_state.sound_volume)
         
     def run(self):
-        global WIDTH, HEIGHT
         while True:
-            resized = False
-            for event in pygame.event.get(pygame.VIDEORESIZE):
-                WIDTH, HEIGHT = event.size
-                self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
-                self.render_manager.update_screen_size(WIDTH, HEIGHT)
-                if self.game_state.current_state == "game_play": resized = True
-            
-            if resized:
-                self.game_state.change_state("game_play"); continue
-
             state = self.game_state.current_state
             if state == "start_menu":
                 result = self.handle_start_menu()
@@ -558,12 +563,8 @@ class Game:
                 if next_state: self.game_state.change_state(next_state)
             elif state == "settings":
                 command, value = self.handle_settings()
-                if command == "change_resolution":
-                    self.game_state.change_state("settings", {"res_index": value['res_index'], "volume": value['volume']})
-                    WIDTH, HEIGHT = RESOLUTIONS[value['res_index']]
-                    self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
-                    self.render_manager.update_screen_size(WIDTH, HEIGHT)
-                elif command: self.game_state.change_state(command, value)
+                if command:
+                    self.game_state.change_state(command, value)
             elif state == "ranking":
                 next_state, _ = self.handle_ranking()
                 if next_state: self.game_state.change_state(next_state)
@@ -641,34 +642,28 @@ class Game:
             self.clock.tick(FPS)
 
     def handle_settings(self):
-        dragging_handle, resolution_dropdown_open = False, False
+        dragging_handle = False
         temp_volume = self.game_state.sound_volume
         while True:
-            ui_elements = self.render_manager.prepare_settings_assets(self.game_state.current_res_index, resolution_dropdown_open)
-            option_rects = ui_elements.get('option_rects', {})
+            ui_elements = self.render_manager.prepare_settings_assets()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT: pygame.quit(); sys.exit()
-                if event.type == pygame.KEYDOWN and (event.key == pygame.K_ESCAPE or event.key == pygame.K_TAB): audio_manager.play_sound('click'); return "main_menu", {"volume": temp_volume}
+                if event.type == pygame.KEYDOWN and (event.key == pygame.K_ESCAPE or event.key == pygame.K_TAB):
+                    audio_manager.play_sound('click'); return "main_menu", {"volume": temp_volume}
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                    if ui_elements['back_button'].collidepoint(event.pos): audio_manager.play_sound('click'); return "main_menu", {"volume": temp_volume}
-                    if resolution_dropdown_open:
-                        is_option_clicked = False
-                        for index, rect in option_rects.items():
-                            if rect.collidepoint(event.pos):
-                                audio_manager.play_sound('click'); is_option_clicked, resolution_dropdown_open = True, False
-                                if index != self.game_state.current_res_index: return "change_resolution", {"res_index": index, "volume": temp_volume}
-                                break
-                        if not is_option_clicked: resolution_dropdown_open = False
-                    else:
-                        if ui_elements['screen_size_button'].collidepoint(event.pos): audio_manager.play_sound('click'); resolution_dropdown_open = True
-                        if ui_elements['sound_handle'].collidepoint(event.pos) or ui_elements['sound_slider'].collidepoint(event.pos): dragging_handle = True
-                if event.type == pygame.MOUSEBUTTONUP and event.button == 1: dragging_handle = False
+                    if ui_elements['back_button'].collidepoint(event.pos):
+                        audio_manager.play_sound('click'); return "main_menu", {"volume": temp_volume}
+                    if ui_elements['sound_handle'].collidepoint(event.pos) or ui_elements['sound_slider'].collidepoint(event.pos):
+                        dragging_handle = True
+                if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                    dragging_handle = False
                 if event.type == pygame.MOUSEMOTION and dragging_handle:
                     handle_rect, slider_rect = ui_elements['sound_handle'], ui_elements['sound_slider']
                     handle_rect.centerx = max(slider_rect.left, min(event.pos[0], slider_rect.right))
                     temp_volume = (handle_rect.centerx - slider_rect.left) / slider_rect.width
                     audio_manager.set_music_volume(temp_volume); audio_manager.set_sound_volume(temp_volume)
-            self.render_manager.render_settings_screen(self.game_state.current_res_index, temp_volume, dragging_handle, resolution_dropdown_open)
+            
+            self.render_manager.render_settings_screen(temp_volume, ui_elements)
             pygame.display.flip(); self.clock.tick(FPS)
 
     def handle_ranking(self):

@@ -108,6 +108,8 @@ class RenderManager:
         self.ui_manager.draw_interactive_button(button_rects['start'], "게임 시작", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
         self.ui_manager.draw_interactive_button(button_rects['desc'], "설명", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
         self.ui_manager.draw_interactive_button(button_rects['rank'], "랭킹", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
+        
+        # --- [수정] settings 버튼(톱니바퀴)을 그리는 코드 복원 ---
         self.ui_manager.draw_gear(button_rects['settings'], GRAY)
         
     def prepare_description_assets(self):
@@ -164,44 +166,32 @@ class RenderManager:
         
         self.ui_manager.draw_interactive_button(back_button_rect, button_text, button_font, (220, 220, 220), WHITE, (100, 100, 100))
 
-    def prepare_settings_assets(self, current_res_index, dropdown_open):
-        settings_bg_rect = pygame.Rect(0, 0, scale_x(1280 - 400), scale_y(720 - 250)); settings_bg_rect.center = (self.width / 2, self.height / 2)
+    def prepare_settings_assets(self):
+        settings_bg_rect = pygame.Rect(0, 0, scale_x(1280 - 400), scale_y(720 - 400)); settings_bg_rect.center = (self.width / 2, self.height / 2)
         back_button_rect = pygame.Rect(0, 0, scale_x(220), scale_y(70)); back_button_rect.center = (self.width / 2, settings_bg_rect.bottom - scale_y(60))
-        y_pos_res, y_pos_sound = settings_bg_rect.centery - scale_y(50), settings_bg_rect.centery + scale_y(50)
-        screen_size_button_rect = pygame.Rect(0, 0, scale_x(350), scale_y(60)); screen_size_button_rect.midleft = (settings_bg_rect.centerx + scale_x(20), y_pos_res)
-        sound_slider_rect = pygame.Rect(0, 0, scale_x(300), scale_y(15)); sound_slider_rect.midleft = (settings_bg_rect.centerx + scale_x(20), y_pos_sound)
+        y_pos_sound = settings_bg_rect.centery
+        sound_slider_rect = pygame.Rect(0, 0, scale_x(300), scale_y(15)); sound_slider_rect.midleft = (settings_bg_rect.centerx - scale_x(130), y_pos_sound)
         sound_handle_rect = pygame.Rect(0, 0, scale_x(20), scale_y(40)); sound_handle_rect.centery = sound_slider_rect.centery
-        option_rects = {}
-        if dropdown_open:
-            for i, res in enumerate(RESOLUTIONS):
-                rect = pygame.Rect(screen_size_button_rect); rect.y += (i + 1) * (screen_size_button_rect.height + scale_y(5)); option_rects[i] = rect
-        return {'settings_bg': settings_bg_rect, 'back_button': back_button_rect, 'screen_size_button': screen_size_button_rect, 'sound_slider': sound_slider_rect, 'sound_handle': sound_handle_rect, 'option_rects': option_rects}
+        return {'settings_bg': settings_bg_rect, 'back_button': back_button_rect, 'sound_slider': sound_slider_rect, 'sound_handle': sound_handle_rect}
 
-    def render_settings_screen(self, current_res_index, temp_volume, dragging_handle, dropdown_open):
+    def render_settings_screen(self, temp_volume, ui_elements):
         self.render_background()
         self.ui_manager.draw_overlay((0, 0, 0, 150))
         fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(80), bold=True), 'option': pygame.font.SysFont("malgungothic", scale_font(50)), 'button': pygame.font.SysFont("malgungothic", scale_font(40))}
         
-        ui = self.prepare_settings_assets(current_res_index, dropdown_open)
-        
-        settings_bg_rect, sound_slider_rect = ui['settings_bg'], ui['sound_slider']
-        sound_handle_rect = ui['sound_handle']
+        settings_bg_rect, sound_slider_rect = ui_elements['settings_bg'], ui_elements['sound_slider']
+        sound_handle_rect = ui_elements['sound_handle']
 
         sound_handle_rect.centerx = sound_slider_rect.left + (sound_slider_rect.width * temp_volume)
 
         self.ui_manager.draw_panel(settings_bg_rect, (230, 230, 230, 220), BLACK, 3, 15)
         title_surf = fonts['title'].render("설정", True, BLACK)
         self.screen.blit(title_surf, title_surf.get_rect(center=(settings_bg_rect.centerx, settings_bg_rect.top + scale_y(70))))
-        res_text_surf = fonts['option'].render("화면 크기", True, BLACK)
-        self.screen.blit(res_text_surf, res_text_surf.get_rect(midright=(settings_bg_rect.centerx - scale_x(20), ui['screen_size_button'].centery)))
-        self.ui_manager.draw_interactive_button(ui['screen_size_button'], f"{RESOLUTIONS[current_res_index][0]}x{RESOLUTIONS[current_res_index][1]}", fonts['option'], WHITE, (240, 240, 240), (100, 100, 100))
+        
         sound_text_surf = fonts['option'].render("사운드", True, BLACK)
-        self.screen.blit(sound_text_surf, sound_text_surf.get_rect(midright=(settings_bg_rect.centerx - scale_x(20), ui['sound_slider'].centery)))
+        self.screen.blit(sound_text_surf, sound_text_surf.get_rect(midright=(sound_slider_rect.left - scale_x(20), sound_slider_rect.centery)))
         self.ui_manager.draw_slider(sound_slider_rect, sound_handle_rect, WHITE, (150, 150, 150), BLACK)
-        self.ui_manager.draw_interactive_button(ui['back_button'], "뒤로 가기", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
-        if dropdown_open:
-            for index, rect in ui['option_rects'].items():
-                self.ui_manager.draw_interactive_button(rect, f"{RESOLUTIONS[index][0]}x{RESOLUTIONS[index][1]}", fonts['option'], WHITE, (240, 240, 240), (100, 100, 100))
+        self.ui_manager.draw_interactive_button(ui_elements['back_button'], "뒤로 가기", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
 
     def prepare_ranking_assets(self):
         title_rect_center_y = scale_y(120)
@@ -299,7 +289,8 @@ class RenderManager:
                 self.screen.blit(ui_animal.image, ui_animal.rect)
             else:
                 pygame.draw.rect(self.screen, ui_animal.icon_color, ui_animal.rect)
-                self.ui_manager.draw_centered_text(ui_animal.name, fonts['small'], BLACK, ui_animal.rect.center)
+                if fonts and 'small' in fonts:
+                    self.ui_manager.draw_centered_text(ui_animal.name, fonts['small'], BLACK, ui_animal.rect.center)
             
             count = animal_usage_counts.get(ui_animal.name, 0)
             if count == 0:
