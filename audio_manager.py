@@ -23,11 +23,14 @@ class AudioManager:
             'click': resource_path('assets/Sound/select_002.ogg'),
             'jump': resource_path('assets/Sound/confirmation_001.ogg'),
             'place': resource_path('assets/Sound/switch_002.ogg'),
+            'drop': resource_path('assets/Sound/drop.ogg'),
+            'bite': resource_path('assets/Sound/bite.ogg'),
             'game_over': resource_path('assets/Sound/error_005.ogg'),
             'card_slide': resource_path('assets/Sound/card-slide-2.ogg'),
             'error': resource_path('assets/Sound/error_008.ogg'),
             'tap': resource_path('assets/Sound/tap-a.ogg'),
-            'destroy': resource_path('assets/Sound/destroy.ogg')
+            'destroy': resource_path('assets/Sound/destroy.ogg'),
+            'victory': resource_path('assets/Sound/yay.ogg')
         }
         
         self.load_sounds()

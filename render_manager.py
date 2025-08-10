@@ -1,6 +1,7 @@
 # render_manager.py
 
 import pygame
+import random
 from typing import List, Tuple, Optional
 from tilemap_renderer import TileMapManager
 from ui_manager import UIManager
@@ -15,22 +16,81 @@ class RenderManager:
         self.ui_manager = UIManager(screen)
         self.width = screen.get_width()
         self.height = screen.get_height()
+        
+        # 기존 배경 이미지
         try:
-            self.background_image = pygame.image.load(resource_path("background.png")).convert()
+            self.background_image = pygame.image.load(resource_path("assets/bg/background.png")).convert()
         except FileNotFoundError:
             self.background_image = None
+            
+        # 오프닝 이미지들 로드 및 랜덤 선택
+        self.opening_backgrounds = []
+        opening_files = [
+            "AnimalBridge_opening_gray.png",
+            "AnimalBridge_opening_green.png", 
+            "AnimalBridge_opening_ivory.png",
+            "AnimalBridge_opening_violet.png",
+            "AnimalBridge_opening_yellow.png"
+        ]
+        
+        for filename in opening_files:
+            try:
+                original_image = pygame.image.load(resource_path(f"assets/bg/{filename}")).convert()
+                scaled_image = pygame.transform.scale(original_image, (self.width, self.height))
+                self.opening_backgrounds.append(scaled_image)
+                print(f"✓ 오프닝 배경 로드 성공: {filename}")
+            except FileNotFoundError:
+                print(f"✗ 오프닝 배경 로드 실패: {filename}")
+        
+        # 랜덤하게 하나 선택 (이미지가 있을 경우)
+        if self.opening_backgrounds:
+            self.current_opening_background = random.choice(self.opening_backgrounds)
+        else:
+            self.current_opening_background = None
+            print("⚠️ 사용 가능한 오프닝 배경 이미지가 없습니다.")
+        
+        # 폰트 초기화 추가
+        self.fonts = init_fonts()
+        
         self.text_surface_cache = None
 
     def update_screen_size(self, width: int, height: int):
         self.width = width; self.height = height
         self.ui_manager.screen = self.screen
+        
+        # 기존 배경 이미지 스케일링
         if self.background_image:
             self.background_image = pygame.transform.scale(self.background_image, (width, height))
+        
+        # 오프닝 배경들 다시 스케일링
+        opening_files = [
+            "AnimalBridge_opening_gray.png",
+            "AnimalBridge_opening_green.png", 
+            "AnimalBridge_opening_ivory.png",
+            "AnimalBridge_opening_violet.png",
+            "AnimalBridge_opening_yellow.png"
+        ]
+        
+        self.opening_backgrounds.clear()
+        for filename in opening_files:
+            try:
+                original_image = pygame.image.load(resource_path(f"assets/bg/{filename}")).convert()
+                scaled_image = pygame.transform.scale(original_image, (width, height))
+                self.opening_backgrounds.append(scaled_image)
+            except FileNotFoundError:
+                pass
+        
+        # 현재 선택된 배경도 다시 스케일링
+        if self.opening_backgrounds:
+            self.current_opening_background = random.choice(self.opening_backgrounds)
+        
         self.text_surface_cache = None
 
     def render_background(self, type: str = "default"):
-        if self.background_image: self.screen.blit(self.background_image, (0, 0))
-        else: self.screen.fill(BACKGROUND_COLOR)
+        if self.background_image: 
+            self.screen.blit(self.background_image, (0, 0))
+        else: 
+            self.screen.fill(BACKGROUND_COLOR)
 
     def render_terrain(self, terrain_rects: List[pygame.Rect]):
         self.tilemap_manager.terrain_renderer.render_terrain(self.screen, terrain_rects)
@@ -69,9 +129,9 @@ class RenderManager:
         panel_rect.center = (self.width / 2, self.height / 2)
         self.ui_manager.draw_panel(panel_rect, (40, 40, 50, 230), WHITE, 3, 15)
 
-        title_font = pygame.font.SysFont("malgungothic", scale_font(60), bold=True)
-        body_font = pygame.font.SysFont("malgungothic", scale_font(35))
-        prompt_font = pygame.font.SysFont("malgungothic", scale_font(30), italic=True)
+        title_font = self.fonts['title_small']
+        body_font = self.fonts['body_medium']
+        prompt_font = self.fonts['body_small']
         
         self.ui_manager.draw_centered_text("환영합니다!", title_font, YELLOW, (panel_rect.centerx, panel_rect.top + scale_y(60)))
         
@@ -87,20 +147,25 @@ class RenderManager:
 
         self.ui_manager.draw_centered_text("(아무 곳이나 클릭하거나 키를 누르면 시작합니다)", prompt_font, GRAY, (panel_rect.centerx, panel_rect.bottom - scale_y(50)))
 
-
     def render_start_menu(self, player_name: str, input_active: bool, input_box: pygame.Rect, next_button_rect: pygame.Rect, fonts: dict):
-        self.screen.fill(WHITE)
-        title_surf = fonts['title'].render("animal bridge", True, BLACK)
-        self.screen.blit(title_surf, title_surf.get_rect(center=(self.width / 2, self.height / 2 - scale_y(150))))
-        prompt_surf = fonts['prompt'].render("당신의 이름을 알려주세요", True, BLACK)
-        self.screen.blit(prompt_surf, prompt_surf.get_rect(center=(self.width / 2, self.height / 2 - scale_y(50))))
+        # 오프닝 배경 이미지가 있으면 배경 이미지를, 없으면 흰색 배경을 그린다
+        if self.current_opening_background:
+            self.screen.blit(self.current_opening_background, (0, 0))
+        else:
+            self.screen.fill(WHITE)
+        
+      
         self.ui_manager.draw_text_input(input_box, player_name, fonts['input'], "클릭해서 이름을 작성하세요", fonts['placeholder'], input_active)
         self.ui_manager.draw_interactive_button(next_button_rect, "다음", fonts['prompt'], (220, 220, 220), WHITE, (100, 100, 100))
 
     def render_main_menu(self, player_name: str, button_rects: dict, fonts: dict):
-        self.screen.fill(WHITE)
-        title_surf = fonts['title'].render("animal bridge", True, BLACK)
-        self.screen.blit(title_surf, title_surf.get_rect(center=(self.width / 2, self.height / 2 - scale_y(150))))
+        # 오프닝 배경 이미지가 있으면 배경 이미지를, 없으면 흰색 배경을 그린다
+        if self.current_opening_background:
+            self.screen.blit(self.current_opening_background, (0, 0))
+        else:
+            self.screen.fill(WHITE)
+        
+        # 배경과 상관없이 항상 실행되어야 하는 UI 요소들
         name_surf = fonts['name'].render(player_name, True, BLACK)
         name_rect = name_surf.get_rect(right=self.width - scale_x(40), top=scale_y(40))
         self.ui_manager.draw_panel(name_rect.inflate(scale_x(20), scale_y(10)), GRAY, border_color=GRAY, border_width=0, border_radius=5)
@@ -109,14 +174,16 @@ class RenderManager:
         self.ui_manager.draw_interactive_button(button_rects['desc'], "설명", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
         self.ui_manager.draw_interactive_button(button_rects['rank'], "랭킹", fonts['button'], (220, 220, 220), WHITE, (100, 100, 100))
         
-        # --- [수정] settings 버튼(톱니바퀴)을 그리는 코드 복원 ---
+        # settings 버튼(톱니바퀴)
         self.ui_manager.draw_gear(button_rects['settings'], GRAY)
-        
+
     def prepare_description_assets(self):
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(70), bold=True), 
-                 'header': pygame.font.SysFont("malgungothic", scale_font(45), bold=True), 
-                 'body': pygame.font.SysFont("malgungothic", scale_font(30)), 
-                 'button': pygame.font.SysFont("malgungothic", scale_font(40))}
+        fonts = {
+            'title': self.fonts['title_medium'], 
+            'header': self.fonts['header'], 
+            'body': self.fonts['body_small'], 
+            'button': self.fonts['button_small']
+        }
         
         lines = [("목표", fonts['header'], YELLOW), 
                  ("동물 블록을 쌓아 다리를 만들어 플레이어가 깃발에 닿게 해주세요.", fonts['body'], WHITE), 
@@ -154,8 +221,8 @@ class RenderManager:
         back_button_rect = ui_elements['back_button_rect']
         text_content_height = ui_elements['text_content_height']
 
-        title_font = pygame.font.SysFont("malgungothic", scale_font(70), bold=True)
-        button_font = pygame.font.SysFont("malgungothic", scale_font(40))
+        title_font = self.fonts['title_medium']
+        button_font = self.fonts['button_small']
 
         self.ui_manager.draw_panel(panel_rect, (40, 40, 50, 230), WHITE, 3, 15)
         title_surf = title_font.render("게임 설명", True, WHITE)
@@ -177,7 +244,11 @@ class RenderManager:
     def render_settings_screen(self, temp_volume, ui_elements):
         self.render_background()
         self.ui_manager.draw_overlay((0, 0, 0, 150))
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(80), bold=True), 'option': pygame.font.SysFont("malgungothic", scale_font(50)), 'button': pygame.font.SysFont("malgungothic", scale_font(40))}
+        fonts = {
+            'title': self.fonts['title_large'], 
+            'option': self.fonts['body_large'], 
+            'button': self.fonts['button_small']
+        }
         
         settings_bg_rect, sound_slider_rect = ui_elements['settings_bg'], ui_elements['sound_slider']
         sound_handle_rect = ui_elements['sound_handle']
@@ -202,7 +273,12 @@ class RenderManager:
     
     def render_ranking_screen(self, current_stage, ranking_data):
         self.render_background(); self.ui_manager.draw_overlay((0, 0, 0, 150))
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(56), bold=True), 'rank': pygame.font.SysFont("malgungothic", scale_font(30)), 'arrow': pygame.font.SysFont("calibri", scale_font(56), bold=True), 'button': pygame.font.SysFont("malgungothic", scale_font(30))}
+        fonts = {
+            'title': self.fonts['title_small'], 
+            'rank': self.fonts['body_small'], 
+            'arrow': self.fonts['title_small'], 
+            'button': self.fonts['body_small']
+        }
         title_text = f"랭킹 (스테이지 {current_stage})"; title_rect_center_y = scale_y(120)
         self.ui_manager.draw_centered_text_with_shadow(title_text, fonts['title'], WHITE, BLACK, (self.width / 2, title_rect_center_y))
         left_arrow, right_arrow, back_button = self.prepare_ranking_assets()
@@ -225,12 +301,14 @@ class RenderManager:
 
     def render_stage_select(self, stage_rects, selected_stage_num, back_button_rect, scroll_y, scroll_bar_rect, content_height, view_height, highest_unlocked: int):
         self.render_background()
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(80), bold=True), 
-                 'stage_title': pygame.font.SysFont("malgungothic", scale_font(40), bold=True),
-                 'stage_num': pygame.font.SysFont("impact", scale_font(50)),
-                 'feature': pygame.font.SysFont("malgungothic", scale_font(25), bold=True),
-                 'popup_title': pygame.font.SysFont("malgungothic", scale_font(60), bold=True),
-                 'popup_info': pygame.font.SysFont("malgungothic", scale_font(50))}
+        fonts = {
+            'title': self.fonts['title_large'], 
+            'stage_title': self.fonts['button_small'],
+            'stage_num': self.fonts['body_large'],
+            'feature': self.fonts['body_small'],
+            'popup_title': self.fonts['title_small'],
+            'popup_info': self.fonts['body_large']
+        }
         
         self.ui_manager.draw_centered_text_with_shadow("스테이지 선택", fonts['title'], WHITE, BLACK, (self.width / 2, scale_y(100)))
 
@@ -262,7 +340,6 @@ class RenderManager:
                     padlock_area.right = visible_rect.right - scale_x(30)
                     self.ui_manager.draw_padlock(padlock_area, (40, 40, 40))
 
-
         self.ui_manager.draw_scroll_bar(scroll_bar_rect, content_height, view_height, scroll_y)
 
         if selected_stage_num:
@@ -282,7 +359,7 @@ class RenderManager:
     def render_game_ui(self, ui_animals: list, dragging_animal: Optional[dict], animal_usage_counts: dict, stats: dict, fonts: dict, restart_button_rect: pygame.Rect, start_time: int):
         self.ui_manager.draw_game_ui_panel(pygame.Rect(0, self.height - scale_y(120), self.width, scale_y(120)))
         
-        count_font = pygame.font.SysFont("impact", scale_font(25))
+        count_font = self.fonts['count']
 
         for ui_animal in ui_animals:
             if ui_animal.image:
@@ -307,7 +384,7 @@ class RenderManager:
         if dragging_animal:
             self.render_dragging_animal(dragging_animal)
 
-        button_font = pygame.font.SysFont("malgungothic", scale_font(25), bold=True)
+        button_font = self.fonts['count']
         self.ui_manager.draw_interactive_button(restart_button_rect, "다시 시작", button_font, (220, 220, 220), WHITE, (100, 100, 100))
 
         elapsed_seconds = (pygame.time.get_ticks() - start_time) / 1000
@@ -315,7 +392,7 @@ class RenderManager:
         seconds = int(elapsed_seconds % 60)
         time_str = f"{minutes:02}:{seconds:02}"
 
-        timer_font = pygame.font.SysFont("impact", scale_font(40))
+        timer_font = self.fonts['timer']
         time_surf = timer_font.render(time_str, True, WHITE)
         time_shadow_surf = timer_font.render(time_str, True, (0, 0, 0, 150))
 
@@ -340,7 +417,11 @@ class RenderManager:
 
     def render_ending_scene(self, stage_num: int, used: int, eaten: int, time_str: str, next_button_rect: pygame.Rect):
         self.ui_manager.draw_overlay((240, 240, 240, 220))
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(100), bold=True), 'stats': pygame.font.SysFont("malgungothic", scale_font(70)), 'button': pygame.font.SysFont("malgungothic", scale_font(50))}
+        fonts = {
+            'title': self.fonts['title_large'], 
+            'stats': self.fonts['title_medium'], 
+            'button': self.fonts['body_large']
+        }
         self.ui_manager.draw_centered_text(f"스테이지 {stage_num} 클리어", fonts['title'], BLACK, (self.width / 2, self.height / 2 - scale_y(200)))
         self.ui_manager.draw_centered_text(f"사용한 블럭: {used}개", fonts['stats'], BLACK, (self.width / 2, self.height / 2 - scale_y(50)))
         self.ui_manager.draw_centered_text(f"먹힌 블럭: {eaten}개", fonts['stats'], BLACK, (self.width / 2, self.height / 2 + scale_y(50)))
@@ -349,6 +430,9 @@ class RenderManager:
 
     def render_game_over_screen(self, fonts: dict, menu_button_rect: pygame.Rect):
         self.ui_manager.draw_overlay((0, 0, 0, 180))
-        fonts_ext = {'title': pygame.font.SysFont("malgungothic", scale_font(120), bold=True), 'button': pygame.font.SysFont("malgungothic", scale_font(50))}
+        fonts_ext = {
+            'title': self.fonts['title_large'], 
+            'button': self.fonts['body_large']
+        }
         self.ui_manager.draw_centered_text_with_shadow("GAME OVER", fonts_ext['title'], RED, (50,0,0), (self.width / 2, self.height / 2 - scale_y(50)))
         self.ui_manager.draw_interactive_button(menu_button_rect, "메인 메뉴로", fonts_ext['button'], (220, 220, 220), WHITE, (100, 100, 100))

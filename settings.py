@@ -166,3 +166,43 @@ STAGE_DATA = {
         "has_hazard_floor": True # <-- [추가] 이 스테이지에 가시 바닥이 있음을 명시
     }
 }
+
+
+
+# ======================================================================================
+# 폰트 중앙 관리
+# ======================================================================================
+FONT_PATH = "assets/Font/PF스타더스트 3.0 Bold.ttf"
+
+def load_font(size, bold=False, italic=False):
+    """게임용 폰트를 로드합니다. 실패 시 시스템 폰트로 대체합니다."""
+    try:
+        return pygame.font.Font(resource_path(FONT_PATH), scale_font(size))
+    except (pygame.error, FileNotFoundError):
+        print(f"⚠️ 커스텀 폰트 로드 실패, 시스템 폰트로 대체: {FONT_PATH}")
+        return pygame.font.SysFont("malgungothic", scale_font(size), bold=bold, italic=italic)
+
+class GameFonts:
+    @staticmethod
+    def get_fonts():
+        return {
+            'title_large': load_font(90, bold=True),
+            'title_medium': load_font(70, bold=True),
+            'title_small': load_font(60, bold=True),
+            'button_large': load_font(60),
+            'button_medium': load_font(50),
+            'button_small': load_font(40),
+            'body_large': load_font(50),
+            'body_medium': load_font(35),
+            'body_small': load_font(30),
+            'input': load_font(50),
+            'placeholder': load_font(30, italic=True),
+            'timer': load_font(40),
+            'count': load_font(25),
+            'header': load_font(45, bold=True),
+        }
+
+def init_fonts():
+    """pygame 초기화 후 호출해야 합니다."""
+    pygame.font.init()
+    return GameFonts.get_fonts()

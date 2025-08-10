@@ -8,7 +8,7 @@ import math
 import json
 import os
 from settings import *
-from settings import resource_path
+from settings import resource_path, init_fonts
 from render_manager import RenderManager
 from audio_manager import audio_manager
 
@@ -344,13 +344,26 @@ def handle_in_game_help(screen, clock, render_manager):
 # ======================================================================================
 # 게임 플레이 핵심 로직
 # ======================================================================================
-def game_play_logic(screen, clock, stage_level, player_name_param, render_manager):
+def game_play_logic(screen, clock, stage_level, player_name_param, render_manager, game_fonts):
     stage_data = STAGE_DATA.get(str(stage_level), STAGE_DATA["1"])
     available_animals, terrain_specs = stage_data["available_animals"], stage_data["terrain"]
     has_hazard_floor = stage_data.get("has_hazard_floor", False)
 
     space = pymunk.Space()
     space.gravity = (0, scale_y(981))
+    
+    # 도움말 아이콘 로드
+    try:
+        help_icon = pygame.image.load(resource_path(os.path.join('assets', 'Icons', 'question.png'))).convert_alpha()
+        help_icon = pygame.transform.scale(help_icon, (scale_x(40), scale_y(40)))  # 적절한 크기로 조정
+    except Exception as e:
+        print(f"도움말 아이콘 로드 실패: {e}")
+        help_icon = None
+        
+    # 충돌 사운드를 위한 변수들
+    last_drop_sound_time = 0
+    drop_sound_cooldown = 100  # 100ms 쿨다운으로 단축
+    animal_last_velocities = {}  # 각 동물의 이전 속도 저장
     
     setup_level(space, terrain_specs)
     
@@ -380,7 +393,7 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         block_scale = WIDTH / (BASE_WIDTH / 56.25)
         
         help_button_rect = pygame.Rect(restart_button_rect.right + scale_x(10), scale_y(20), scale_y(50), scale_y(50))
-        help_font = pygame.font.SysFont("malgungothic", scale_font(40), bold=True)
+        help_font = game_fonts['button_small']
         
         mouse_pos = pygame.mouse.get_pos()
         help_button_hover = help_button_rect.collidepoint(mouse_pos)
@@ -449,12 +462,31 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
         if player.body.position.y > player_death_y:
             player.respawn(); audio_manager.play_sound('error')
 
+        # 동물 충돌 사운드 체크 - 더 간단한 방법
+        current_time = pygame.time.get_ticks()
+        for animal in game_objects:
+            if not animal.is_dying and animal.body in space.bodies:
+                animal_id = id(animal)
+                current_velocity = animal.body.velocity.length
+                
+                # 이전 속도가 있고, 속도가 급격히 감소했으면 충돌로 간주
+                if (animal_id in animal_last_velocities and 
+                    animal_last_velocities[animal_id] > 100 and  # 이전에 빠르게 움직이고 있었고
+                    current_velocity < 80 and  # 현재는 느려졌으면
+                    current_time - last_drop_sound_time > drop_sound_cooldown):  # 쿨다운 체크
+                    
+                    audio_manager.play_sound('drop')
+                    last_drop_sound_time = current_time
+                    print(f"Drop sound played for {animal.name}")  # 디버그용
+                
+                # 속도를 저장
+                animal_last_velocities[animal_id] = current_velocity
+
         for animal in game_objects[:]:
             if not animal.is_dying:
                 should_die = False
                 if has_hazard_floor:
                     for shape in animal.shapes:
-                        # --- [수정] 각 물리 조각(shape)의 모든 꼭짓점(vertex)을 확인하여 사망 판정 ---
                         world_verts = [shape.body.local_to_world(v) for v in shape.get_vertices()]
                         if any(v.y > hazard_y for v in world_verts):
                             should_die = True
@@ -464,13 +496,14 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
                 
                 if should_die:
                     animal.start_dying()
-                    # destroy 사운드가 없을 경우를 대비해 예외 처리
+                    # 죽는 동물은 속도 추적에서 제거
+                    animal_id = id(animal)
+                    if animal_id in animal_last_velocities:
+                        del animal_last_velocities[animal_id]
                     if audio_manager.sounds.get('destroy'):
                         audio_manager.play_sound('destroy')
                     if animal.body in space.bodies:
                         space.remove(animal.body, *animal.shapes)
-        # --- 수정 끝 ---
-
 
         game_objects = [a for a in game_objects if not (a.is_dying and pygame.time.get_ticks() - a.death_time > a.death_duration)]
         for carnivore in [o for o in game_objects if o.name in CARNIVORES and not o.is_dying]:
@@ -479,39 +512,53 @@ def game_play_logic(screen, clock, stage_level, player_name_param, render_manage
                     to_be_eaten.append(prey)
         if to_be_eaten:
             eaten_blocks_count += len(to_be_eaten)
+            # bite 사운드 재생 (한 번만)
+            audio_manager.play_sound('bite')
+            
             for animal in to_be_eaten:
                 if animal in game_objects: 
                     animal.start_dying()
-                    if audio_manager.sounds.get('destroy'):
-                        audio_manager.play_sound('destroy')
+                    # 먹힌 동물도 속도 추적에서 제거
+                    animal_id = id(animal)
+                    if animal_id in animal_last_velocities:
+                        del animal_last_velocities[animal_id]
                 if animal.body in space.bodies: space.remove(animal.body, *animal.shapes)
             to_be_eaten.clear()
 
         render_manager.render_background("tilemap"); render_manager.render_terrain(get_terrain_rects(terrain_specs))
         if has_hazard_floor: render_manager.render_hazard_floor()
-        player.draw(screen);
+        player.draw(screen)
         for animal in game_objects: animal.draw(screen)
         goal_flag.draw(screen)
         stats = {"used": blocks_used_count, "eaten": eaten_blocks_count, "time_str": f"{(pygame.time.get_ticks() - start_time) / 1000:.2f}s"}
         render_manager.render_game_ui(ui_animals, dragging_animal, animal_usage_counts, stats, None, restart_button_rect, start_time)
         
+        # 도움말 버튼 그리기
         shadow_rect = help_button_rect.move(scale_x(3), scale_y(3))
-        pygame.draw.rect(screen, (50, 50, 50), shadow_rect, border_radius=10)
+        pygame.draw.circle(screen, (50, 50, 50), shadow_rect.center, help_button_rect.width // 2)
         
         base_color = (200, 200, 200)
         hover_color = (230, 230, 230)
         current_color = hover_color if help_button_hover else base_color
-        pygame.draw.rect(screen, current_color, help_button_rect, border_radius=10)
+        pygame.draw.circle(screen, current_color, help_button_rect.center, help_button_rect.width // 2)
+        pygame.draw.circle(screen, (100, 100, 100), help_button_rect.center, help_button_rect.width // 2, 2)
 
-        help_text_surf = help_font.render("?", True, BLACK)
-        help_text_rect = help_text_surf.get_rect(center=help_button_rect.center)
-        screen.blit(help_text_surf, help_text_rect)
+        # 아이콘 또는 텍스트 그리기
+        if help_icon:
+            icon_rect = help_icon.get_rect(center=help_button_rect.center)
+            screen.blit(help_icon, icon_rect)
+        else:
+            # 아이콘 로드 실패 시 텍스트로 대체
+            help_text_surf = help_font.render("?", True, BLACK)
+            help_text_rect = help_text_surf.get_rect(center=help_button_rect.center)
+            screen.blit(help_text_surf, help_text_rect)
 
         if goal_area.collidepoint(player.body.position):
             clear_time_seconds = (pygame.time.get_ticks() - start_time) / 1000
+            audio_manager.play_sound('victory')  # 승리 사운드 재생 추가
             add_ranking_entry(stage_level, player_name_param, blocks_used_count, clear_time_seconds, eaten_blocks_count)
-            return "stage_clear", {"stage": stage_level, "blocks": blocks_used_count, "eaten": eaten_blocks_count, "time": clear_time_seconds}
-            
+            return "stage_clear", {"stage": stage_level, "blocks": blocks_used_count, "eaten": eaten_blocks_count, "time": clear_time_seconds}      
+        
         for _ in range(5): space.step(1.0 / (FPS * 5))
         pygame.display.flip(); clock.tick(FPS)
 
@@ -534,6 +581,9 @@ class Game:
         self.render_manager = RenderManager(self.screen)
         audio_manager.set_sound_volume(self.game_state.sound_volume)
         
+        # 폰트 초기화
+        self.fonts = init_fonts()
+
     def run(self):
         while True:
             state = self.game_state.current_state
@@ -547,7 +597,7 @@ class Game:
                 next_state, stage = self.handle_stage_select()
                 if next_state: self.game_state.change_state(next_state, {"selected_stage": stage})
             elif state == "game_play":
-                result = game_play_logic(self.screen, self.clock, self.game_state.selected_stage, self.game_state.player_name, self.render_manager)
+                result = game_play_logic(self.screen, self.clock, self.game_state.selected_stage, self.game_state.player_name, self.render_manager, self.fonts)
                 if isinstance(result, tuple) and result[0] == "stage_clear":
                     clear_info = result[1]
                     cleared_stage = clear_info["stage"]
@@ -573,7 +623,12 @@ class Game:
 
     def handle_start_menu(self):
         player_name, input_active = "", False
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(90), bold=True), 'prompt': pygame.font.SysFont("malgungothic", scale_font(60)), 'input': pygame.font.SysFont("malgungothic", scale_font(50)), 'placeholder': pygame.font.SysFont("malgungothic", scale_font(20), italic=True)}
+        fonts = {
+            'title': self.fonts['title_large'], 
+            'prompt': self.fonts['body_large'], 
+            'input': self.fonts['input'], 
+            'placeholder': self.fonts['placeholder']
+        }
         pygame.key.set_repeat(500, 50)
         while True:
             input_box = pygame.Rect(WIDTH / 2 - scale_x(200), HEIGHT / 2, scale_x(400), scale_y(80))
@@ -596,7 +651,11 @@ class Game:
             self.clock.tick(FPS)
 
     def handle_main_menu(self):
-        fonts = {'title': pygame.font.SysFont("malgungothic", scale_font(90), bold=True), 'name': pygame.font.SysFont("malgungothic", scale_font(30)), 'button': pygame.font.SysFont("malgungothic", scale_font(60))}
+        fonts = {
+            'title': self.fonts['title_large'], 
+            'name': self.fonts['body_small'], 
+            'button': self.fonts['button_large']
+        }
         while True:
             button_rects = {'start': pygame.Rect(WIDTH/2 - scale_x(150), HEIGHT/2, scale_x(300), scale_y(80)), 'desc': pygame.Rect(WIDTH/2 - scale_x(200), HEIGHT/2 + scale_y(100), scale_x(180), scale_y(70)), 'rank': pygame.Rect(WIDTH/2 + scale_x(20), HEIGHT/2 + scale_y(100), scale_x(180), scale_y(70)), 'settings': pygame.Rect(scale_x(30), scale_y(30), scale_x(50), scale_y(50))}
             for event in pygame.event.get():

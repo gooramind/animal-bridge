@@ -9,12 +9,14 @@ class UIManager:
     def __init__(self, screen):
         self.screen = screen
         self.font_cache = {}
-        # [수정] 이미지 로딩을 시도하지 않고, gear_icon을 None으로 설정하여 도형으로 그리도록 강제합니다.
-        # try:
-        #     self.gear_icon = pygame.image.load(resource_path("assets/img/gear_icon.png")).convert_alpha()
-        # except pygame.error:
-        #     print("경고: 'assets/img/gear_icon.png' 파일을 찾을 수 없습니다. 기본 도형으로 대체합니다.")
-        self.gear_icon = None
+        
+        # 톱니바퀴 이미지 로드
+        try:
+            self.gear_icon = pygame.image.load(resource_path("assets/Icons/gear.png")).convert_alpha()
+            print("✓ 톱니바퀴 아이콘 로드 성공: gear.png")
+        except pygame.error as e:
+            print(f"✗ 톱니바퀴 아이콘 로드 실패: {e}")
+            self.gear_icon = None
 
     def draw_disabled_overlay(self, rect, alpha=180):
         """rect 위에 반투명 회색 오버레이를 그려 비활성화 효과를 줌"""
